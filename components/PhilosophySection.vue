@@ -59,12 +59,13 @@
 </template>
 
 <script setup lang="ts">
-const { t, tm } = useI18n()
+const { t } = useI18n()
 const ROMANS = ['I.', 'II.', 'III.']
 const pillars = computed(() =>
-  ((tm('philosophy.pillars') as Array<{ title: string; desc: string }>) ?? []).map((p, i) => ({
-    ...p,
-    roman: ROMANS[i],
+  ROMANS.map((roman, i) => ({
+    roman,
+    title: t(`philosophy.pillars[${i}].title`),
+    desc:  t(`philosophy.pillars[${i}].desc`),
   }))
 )
 </script>

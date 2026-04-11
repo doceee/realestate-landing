@@ -77,6 +77,11 @@
 </template>
 
 <script setup lang="ts">
-const { t, tm } = useI18n()
-const services = computed(() => tm('services.items') as Array<{ title: string; desc: string }>)
+const { t } = useI18n()
+const services = computed(() =>
+  Array.from({ length: 6 }, (_, i) => ({
+    title: t(`services.items[${i}].title`),
+    desc:  t(`services.items[${i}].desc`),
+  }))
+)
 </script>

@@ -125,16 +125,15 @@
 </template>
 
 <script setup lang="ts">
-const { t, tm } = useI18n()
+const { t } = useI18n()
 
 const STAT_VALUES = ['320+', '€2.4B', '16', '94%']
-const stats = computed(() => {
-  const rawStats = tm('hero.stats') as Array<{ label: string }>
-  return STAT_VALUES.map((value, i) => ({
+const stats = computed(() =>
+  STAT_VALUES.map((value, i) => ({
     value,
-    label: rawStats[i]?.label ?? '',
+    label: t(`hero.stats[${i}].label`),
   }))
-})
+)
 
 const VIDEO_URL = 'https://assets.mixkit.co/videos/4046/4046-720.mp4';
 

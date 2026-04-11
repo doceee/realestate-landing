@@ -136,8 +136,10 @@
 </template>
 
 <script setup lang="ts">
-const { t, tm } = useI18n()
-const tags = computed(() => tm('video.tags') as string[])
+const { t } = useI18n()
+const tags = computed(() =>
+  Array.from({ length: 5 }, (_, i) => t(`video.tags[${i}]`))
+)
 
 const featVid = ref<HTMLVideoElement | null>(null);
 const playing = ref(false);

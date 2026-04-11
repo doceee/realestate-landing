@@ -88,6 +88,11 @@
 </template>
 
 <script setup lang="ts">
-const { t, tm } = useI18n()
-const values = computed(() => tm('about.values') as Array<{ title: string; desc: string }>)
+const { t } = useI18n()
+const values = computed(() =>
+  Array.from({ length: 3 }, (_, i) => ({
+    title: t(`about.values[${i}].title`),
+    desc:  t(`about.values[${i}].desc`),
+  }))
+)
 </script>

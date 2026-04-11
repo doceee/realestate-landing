@@ -19,7 +19,9 @@
 </template>
 
 <script setup lang="ts">
-const { t, tm } = useI18n()
+const { t } = useI18n()
 const year  = new Date().getFullYear()
-const links = computed(() => tm('footer.links') as string[])
+const links = computed(() =>
+  Array.from({ length: 3 }, (_, i) => t(`footer.links[${i}]`))
+)
 </script>
