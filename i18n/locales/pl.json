@@ -1,0 +1,109 @@
+{
+  "nav": {
+    "about":        "O nas",
+    "properties":   "Nieruchomości",
+    "philosophy":   "Filozofia",
+    "services":     "Usługi",
+    "cta":          "Skontaktuj się",
+    "menuAriaLabel":"Menu"
+  },
+  "hero": {
+    "headline1":    "Gdzie wyrafinowane życie",
+    "headline2":    "spotyka swój dom.",
+    "sub":          "Wyselekcjonowane portfolio wyjątkowych nieruchomości na najlepszych europejskich rynkach. Dyskretnie, na miarę i z myślą wyłącznie o kliencie.",
+    "ctaPrimary":   "Przeglądaj oferty",
+    "ctaSecondary": "Nasza historia",
+    "scroll":       "Przewiń",
+    "stats": [
+      { "label": "Sprzedanych nieruchomości" },
+      { "label": "Łączna wartość transakcji" },
+      { "label": "Lat doświadczenia" },
+      { "label": "Lojalność klientów" }
+    ]
+  },
+  "about": {
+    "eyebrow":   "Nasza historia",
+    "headline1": "Dziedzictwo",
+    "headline2": "wyjątkowego smaku.",
+    "p1":        "Założona w Warszawie w 2008 roku, firma Maison & Co. powstała z jednego przekonania: że każdy klient zasługuje na doświadczenie nieruchomościowe tak wyrafinowane, jak same nieruchomości.",
+    "p2":        "Przez szesnaście lat staliśmy się dyskretnym partnerem wymagających nabywców i sprzedających, szukających poufności, wiedzy i niezachwianego wyczucia jakości.",
+    "yearsLabel":"Lat zaufania",
+    "values": [
+      { "title": "Dyskrecja",    "desc": "Każda transakcja prowadzona z bezwzględną poufnością" },
+      { "title": "Selekcja",     "desc": "Wyłącznie nieruchomości spełniające nasze rygorystyczne standardy" },
+      { "title": "Zaangażowanie","desc": "Jeden punkt kontaktu od pierwszego oglądania do finalizacji" }
+    ]
+  },
+  "video": {
+    "eyebrow":        "Wyróżniona oferta",
+    "headline1":      "Rezydencja godna",
+    "headline2":      "Twoich ambicji.",
+    "tags":           ["5 sypialni", "480 m²", "Prywatny ogród", "Inteligentny dom", "Usługi concierge"],
+    "playAriaLabel":  "Odtwórz wideo"
+  },
+  "philosophy": {
+    "eyebrow":        "Nasza filozofia",
+    "quoteBody":      "Nieruchomości to nie tylko transakcja — to staranne powierzenie miejsc,",
+    "quoteHighlight": "które ludzie nazywają domem.",
+    "authorTitle":    "Założycielka i Dyrektor Zarządzająca",
+    "pillars": [
+      {
+        "title": "Zaufanie przed transakcją",
+        "desc":  "Inwestujemy miesiące — niekiedy lata — w zrozumienie wizji klienta, zanim przedstawimy choćby jedną ofertę. Właściwe dopasowanie jest ważniejsze niż szybkie."
+      },
+      {
+        "title": "Jakość ponad ilość",
+        "desc":  "Nasze wyselekcjonowane portfolio pozostaje celowo ograniczone. Reprezentujemy wyłącznie nieruchomości, które sami z dumą nazwalibyśmy domem — i nic poniżej."
+      },
+      {
+        "title": "Dyskrecja jako usługa",
+        "desc":  "Wiele z naszych najważniejszych transakcji nigdy nie trafia do publicznego rejestru. Poufność nie jest polityką — to nasz najgłębszy obowiązek zawodowy."
+      }
+    ]
+  },
+  "services": {
+    "eyebrow":      "Co oferujemy",
+    "headline1":    "Usługi stworzone",
+    "headline2":    "dla Ciebie.",
+    "subtext":      "Od pierwszej konsultacji do przekazania kluczy — nasze usługi obejmują każdy etap drogi do premium nieruchomości, dopasowany do Twoich potrzeb i harmonogramu.",
+    "learnMore":    "Dowiedz się więcej",
+    "ctaTitle":     "Gotowy znaleźć swój",
+    "ctaHighlight": "wymarzony dom?",
+    "ctaSub":       "Umów prywatną konsultację z jednym z naszych doradców.",
+    "ctaBtn":       "Umów konsultację",
+    "items": [
+      {
+        "title": "Reprezentacja kupującego",
+        "desc":  "Działamy wyłącznie w Twoim imieniu — identyfikując oferty poza rynkiem, przeprowadzając rzetelne badanie due diligence i negocjując warunki zgodne z Twoimi priorytetami."
+      },
+      {
+        "title": "Doradztwo dla sprzedającego",
+        "desc":  "Strategiczne wsparcie dla sprzedających szukających maksymalnej wartości przy minimalnej ekspozycji. Dyskretny marketing, kwalifikowani nabywcy i sprawne zarządzanie transakcją."
+      },
+      {
+        "title": "Zarządzanie portfelem",
+        "desc":  "Dla klientów prywatnych posiadających wiele aktywów — stały nadzór, od koordynacji utrzymania po planowanie strategicznych nabyć i zbycia."
+      },
+      {
+        "title": "Usługi relokacyjne",
+        "desc":  "Kompleksowe wsparcie relokacyjne dla kadry zarządzającej i rodzin przeprowadzających się do nowych miast. Poszukiwanie szkół, analiza dzielnic i pomoc w zadomowieniu się."
+      },
+      {
+        "title": "Doradztwo inwestycyjne",
+        "desc":  "Analiza rentowności, porównanie rynkowe i długoterminowe prognozy wzrostu kapitału, aby inwestorzy podejmowali świadome, pewne decyzje w topowych lokalizacjach."
+      },
+      {
+        "title": "Wnętrza i renowacja",
+        "desc":  "Dzięki naszej zaufanej sieci architektów i projektantów łączymy klientów ze specjalistami, którzy podzielają nasze rygorystyczne standardy rzemiosła i materiałów."
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© {year} Maison & Co. · Wszelkie prawa zastrzeżone · Warszawa, Polska",
+    "links": ["Prywatność", "Regulamin", "Mapa strony"]
+  },
+  "seo": {
+    "title":       "Maison & Co. — Luksusowe Nieruchomości",
+    "description": "Wyjątkowe nieruchomości dla wymagających klientów. 16 lat zaufania na najlepszych europejskich rynkach."
+  }
+}
