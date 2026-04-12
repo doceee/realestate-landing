@@ -218,14 +218,3 @@
 
 	onUnmounted(() => cancelFade());
 </script>
-
-<style scoped>
-	@keyframes scrollDrop {
-		0% {
-			transform: translateY(-100%);
-		}
-		100% {
-			transform: translateY(200%);
-		}
-	}
-</style>

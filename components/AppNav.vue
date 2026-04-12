@@ -15,7 +15,11 @@
 				>
 					Maison
 				</span>
-				<span class="text-lg leading-none font-serif-italic">&</span>
+				<span
+					class="text-lg leading-none text-stone-300 font-serif-italic"
+				>
+					&
+				</span>
 				<span
 					class="font-serif text-lg leading-none tracking-wide text-white"
 				>
@@ -129,21 +133,18 @@
 					v-for="loc in locales"
 					:key="loc.code"
 					:to="switchLocalePath(loc.code)"
-					class="rounded-full px-4 py-2 text-[0.78rem] uppercase tracking-[0.1em] text-white/60 no-underline transition-all duration-300"
+					class="rounded-full px-4 py-2 text-[0.78rem] uppercase tracking-[0.1em] no-underline transition-all duration-300"
 					:class="
 						loc.code === locale
-							? 'font-medium'
-							: 'border border-white/20'
+							? 'font-medium text-gold-light'
+							: 'border border-white/20 text-white/60 hover:text-white'
 					"
-					@click="
-						loc.code === locale
-							? () => {}
-							: () => {
-									open = false;
-								}
-					"
+					@click="loc.code !== locale && (open = false)"
 				>
 					{{ loc.name }}
+					<span v-if="loc.code === locale" class="ml-1 text-[0.6rem]">
+						✓
+					</span>
 				</nuxt-link>
 			</div>
 
