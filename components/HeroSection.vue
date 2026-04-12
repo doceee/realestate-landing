@@ -111,7 +111,6 @@
 			</div>
 		</div>
 
-		<!-- Scroll indicator -->
 		<div
 			class="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 animate-fade-in flex-col items-center gap-2 d-800"
 		>

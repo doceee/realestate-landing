@@ -98,8 +98,12 @@
 				<span
 					v-for="i in 3"
 					:key="i"
-					class="block h-[1px] w-5 bg-white/80 transition-all duration-300"
-					:class="open && i === 2 ? 'opacity-0' : ''"
+					class="block h-[1px] w-5 origin-center bg-white/80 transition-all duration-300"
+					:class="{
+						'translate-y-[6px] rotate-45': open && i === 1,
+						'opacity-0': open && i === 2,
+						'-translate-y-[6px] -rotate-45': open && i === 3,
+					}"
 				/>
 			</button>
 		</nav>
@@ -125,13 +129,19 @@
 					v-for="loc in locales"
 					:key="loc.code"
 					:to="switchLocalePath(loc.code)"
-					class="rounded-full px-4 py-2 text-[0.78rem] uppercase tracking-[0.1em] no-underline transition-all duration-300"
+					class="rounded-full px-4 py-2 text-[0.78rem] uppercase tracking-[0.1em] text-white/60 no-underline transition-all duration-300"
 					:class="
 						loc.code === locale
-							? 'font-medium text-stone-950'
-							: 'border border-white/20 text-white/60'
+							? 'font-medium'
+							: 'border border-white/20'
 					"
-					@click="open = false"
+					@click="
+						loc.code === locale
+							? () => {}
+							: () => {
+									open = false;
+								}
+					"
 				>
 					{{ loc.name }}
 				</nuxt-link>
@@ -139,7 +149,7 @@
 
 			<a
 				href="#"
-				class="mt-4 rounded-full px-8 py-3 text-sm font-medium uppercase tracking-wider text-stone-950 no-underline"
+				class="inline-flex items-center gap-2 rounded-full bg-gold-light px-5 py-[9px] text-[0.78rem] font-medium uppercase tracking-[0.1em] text-stone-950 no-underline transition-all duration-300 hover:shadow-[0_4px_20px_rgba(184,154,106,0.4)]"
 				@click="open = false"
 			>
 				{{ t('nav.cta') }}
