@@ -1,211 +1,218 @@
 <template>
-  <header
-    class="fixed top-0 left-0 right-0 z-20 flex justify-center pt-5 px-4 pointer-events-none"
-  >
-    <nav
-      class="pointer-events-auto w-full max-w-5xl px-6 py-3 rounded-full flex items-center justify-between animate-nav-in transition-all duration-500"
-      :class="scrolled ? 'glass-dark' : 'glass'"
-    >
-      <NuxtLink
-        :to="localePath('/')"
-        class="flex items-center gap-2 no-underline group"
-      >
-        <span class="font-serif text-white text-lg tracking-wide leading-none"
-          >Maison</span
-        >
-        <span class="font-serif-italic text-gold-DEFAULT text-lg leading-none"
-          >&</span
-        >
-        <span class="font-serif text-white text-lg tracking-wide leading-none"
-          >Co.</span
-        >
-      </NuxtLink>
+	<header
+		class="pointer-events-none fixed left-0 right-0 top-0 z-20 flex justify-center px-4 pt-5"
+	>
+		<nav
+			class="pointer-events-auto flex w-full max-w-5xl animate-nav-in items-center justify-between rounded-full px-6 py-3 transition-all duration-500"
+			:class="scrolled ? 'glass-dark' : 'glass'"
+		>
+			<nuxt-link
+				:to="localePath('/')"
+				class="group flex items-center gap-2 no-underline"
+			>
+				<span
+					class="font-serif text-lg leading-none tracking-wide text-white"
+				>
+					Maison
+				</span>
+				<span class="text-lg leading-none font-serif-italic">&</span>
+				<span
+					class="font-serif text-lg leading-none tracking-wide text-white"
+				>
+					Co.
+				</span>
+			</nuxt-link>
 
-      <ul class="hidden md:flex items-center gap-8 list-none">
-        <li v-for="link in links" :key="link.href">
-          <a
-            :href="link.href"
-            class="relative text-[0.8rem] text-white/70 no-underline tracking-[0.08em] uppercase hover:text-white transition-colors duration-300 group"
-          >
-            {{ link.label }}
-            <span
-              class="absolute -bottom-[2px] left-0 h-[1px] w-0 bg-gold-DEFAULT transition-all duration-300 group-hover:w-full"
-            />
-          </a>
-        </li>
-      </ul>
+			<ul class="hidden list-none items-center gap-8 md:flex">
+				<li v-for="link in links" :key="link.href">
+					<a
+						:href="link.href"
+						class="group relative text-[0.8rem] uppercase tracking-[0.08em] text-white/70 no-underline transition-colors duration-300 hover:text-white"
+					>
+						{{ link.label }}
+						<span
+							class="absolute -bottom-[2px] left-0 h-[1px] w-0 transition-all duration-300 group-hover:w-full"
+						/>
+					</a>
+				</li>
+			</ul>
 
-      <div class="hidden md:flex items-center gap-4">
-        <div ref="langDropdownEl" class="relative">
-          <button
-            class="flex items-center gap-1 text-[0.78rem] text-white/70 tracking-[0.1em] uppercase hover:text-white transition-colors duration-300 cursor-pointer bg-transparent border-none"
-            :aria-expanded="langOpen"
-            aria-haspopup="listbox"
-            @click="langOpen = !langOpen"
-          >
-            {{ locale.toUpperCase() }}
-            <span
-              class="text-[0.6rem] transition-transform duration-200"
-              :class="langOpen ? 'rotate-180' : ''"
-              >▾</span
-            >
-          </button>
-          <Transition name="dropdown">
-            <div
-              v-if="langOpen"
-              class="absolute top-full right-0 mt-3 bg-stone-900/95 backdrop-blur-md rounded-xl py-1 min-w-[130px] shadow-[0_8px_32px_rgba(0,0,0,0.4)] border border-white/10"
-            >
-              <NuxtLink
-                v-for="loc in locales"
-                :key="loc.code"
-                :to="switchLocalePath(loc.code)"
-                class="flex items-center justify-between px-4 py-2 text-[0.78rem] tracking-[0.08em] uppercase no-underline transition-colors duration-200"
-                :class="
-                  loc.code === locale
-                    ? 'text-gold-DEFAULT'
-                    : 'text-white/60 hover:text-white'
-                "
-                @click="langOpen = false"
-              >
-                {{ loc.name }}
-                <span
-                  v-if="loc.code === locale"
-                  class="text-gold-DEFAULT text-[0.6rem]"
-                  >✓</span
-                >
-              </NuxtLink>
-            </div>
-          </Transition>
-        </div>
+			<div class="hidden items-center gap-4 md:flex">
+				<div ref="langDropdownEl" class="relative">
+					<button
+						class="flex cursor-pointer items-center gap-1 border-none bg-transparent text-[0.78rem] uppercase tracking-[0.1em] text-white/70 transition-colors duration-300 hover:text-white"
+						:aria-expanded="langOpen"
+						aria-haspopup="listbox"
+						@click="langOpen = !langOpen"
+					>
+						{{ locale.toUpperCase() }}
+						<span
+							class="text-[0.6rem] transition-transform duration-200"
+							:class="langOpen ? 'rotate-180' : ''"
+						>
+							▾
+						</span>
+					</button>
+					<transition name="dropdown">
+						<div
+							v-if="langOpen"
+							class="absolute right-0 top-full mt-3 min-w-[130px] rounded-xl border border-white/10 bg-stone-900/95 py-1 shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-blur-md"
+						>
+							<nuxt-link
+								v-for="loc in locales"
+								:key="loc.code"
+								:to="switchLocalePath(loc.code)"
+								class="flex items-center justify-between px-4 py-2 text-[0.78rem] uppercase tracking-[0.08em] no-underline transition-colors duration-200"
+								:class="
+									loc.code === locale
+										? 'text-gold-light'
+										: 'text-white/60 hover:text-white'
+								"
+								@click="langOpen = false"
+							>
+								{{ loc.name }}
+								<span
+									v-if="loc.code === locale"
+									class="text-[0.6rem]"
+								>
+									✓
+								</span>
+							</nuxt-link>
+						</div>
+					</transition>
+				</div>
 
-        <a
-          href="#contact"
-          class="inline-flex items-center gap-2 px-5 py-[9px] rounded-full text-[0.78rem] tracking-[0.1em] uppercase text-stone-950 bg-gold-DEFAULT font-medium no-underline transition-all duration-300 hover:bg-gold-light hover:-translate-y-px hover:shadow-[0_4px_20px_rgba(184,154,106,0.4)]"
-        >
-          {{ t('nav.cta') }}
-        </a>
-      </div>
+				<a
+					href="#contact"
+					class="inline-flex items-center gap-2 rounded-full bg-gold-light px-5 py-[9px] text-[0.78rem] font-medium uppercase tracking-[0.1em] text-stone-950 no-underline transition-all duration-300 hover:shadow-[0_4px_20px_rgba(184,154,106,0.4)]"
+				>
+					{{ t('nav.cta') }}
+				</a>
+			</div>
 
-      <button
-        class="md:hidden flex flex-col gap-[5px] p-1 border-none bg-transparent cursor-pointer"
-        :aria-label="t('nav.menuAriaLabel')"
-        @click="open = !open"
-      >
-        <span
-          v-for="i in 3"
-          :key="i"
-          class="block w-5 h-[1px] bg-white/80 transition-all duration-300"
-          :class="open && i === 2 ? 'opacity-0' : ''"
-        />
-      </button>
-    </nav>
-  </header>
+			<button
+				class="flex cursor-pointer flex-col gap-[5px] border-none bg-transparent p-1 md:hidden"
+				:aria-label="t('nav.menuAriaLabel')"
+				@click="open = !open"
+			>
+				<span
+					v-for="i in 3"
+					:key="i"
+					class="block h-[1px] w-5 bg-white/80 transition-all duration-300"
+					:class="open && i === 2 ? 'opacity-0' : ''"
+				/>
+			</button>
+		</nav>
+	</header>
 
-  <Transition name="drawer">
-    <div
-      v-if="open"
-      class="fixed inset-0 z-10 glass-dark flex flex-col items-center justify-center gap-10 md:hidden"
-    >
-      <a
-        v-for="link in links"
-        :key="link.href"
-        :href="link.href"
-        class="font-serif text-3xl text-white no-underline hover:text-gold-DEFAULT transition-colors duration-300"
-        @click="open = false"
-      >
-        {{ link.label }}
-      </a>
+	<transition name="drawer">
+		<div
+			v-if="open"
+			class="fixed inset-0 z-10 flex flex-col items-center justify-center gap-10 glass-dark md:hidden"
+		>
+			<a
+				v-for="link in links"
+				:key="link.href"
+				:href="link.href"
+				class="font-serif text-3xl text-white no-underline transition-colors duration-300"
+				@click="open = false"
+			>
+				{{ link.label }}
+			</a>
 
-      <div class="flex items-center gap-3 mt-2">
-        <NuxtLink
-          v-for="loc in locales"
-          :key="loc.code"
-          :to="switchLocalePath(loc.code)"
-          class="px-4 py-2 rounded-full text-[0.78rem] tracking-[0.1em] uppercase no-underline transition-all duration-300"
-          :class="
-            loc.code === locale
-              ? 'bg-gold-DEFAULT text-stone-950 font-medium'
-              : 'border border-white/20 text-white/60 hover:border-gold-DEFAULT hover:text-gold-DEFAULT'
-          "
-          @click="open = false"
-        >
-          {{ loc.name }}
-        </NuxtLink>
-      </div>
+			<div class="mt-2 flex items-center gap-3">
+				<nuxt-link
+					v-for="loc in locales"
+					:key="loc.code"
+					:to="switchLocalePath(loc.code)"
+					class="rounded-full px-4 py-2 text-[0.78rem] uppercase tracking-[0.1em] no-underline transition-all duration-300"
+					:class="
+						loc.code === locale
+							? 'font-medium text-stone-950'
+							: 'border border-white/20 text-white/60'
+					"
+					@click="open = false"
+				>
+					{{ loc.name }}
+				</nuxt-link>
+			</div>
 
-      <a
-        href="#contact"
-        class="mt-4 px-8 py-3 rounded-full bg-gold-DEFAULT text-stone-950 text-sm font-medium no-underline uppercase tracking-wider"
-        @click="open = false"
-      >
-        {{ t('nav.cta') }}
-      </a>
-    </div>
-  </Transition>
+			<a
+				href="#contact"
+				class="mt-4 rounded-full px-8 py-3 text-sm font-medium uppercase tracking-wider text-stone-950 no-underline"
+				@click="open = false"
+			>
+				{{ t('nav.cta') }}
+			</a>
+		</div>
+	</transition>
 </template>
 
 <script setup lang="ts">
-const { t, locale, locales } = useI18n();
-const switchLocalePath = useSwitchLocalePath();
-const localePath = useLocalePath();
+	const { t, locale, locales } = useI18n();
+	const switchLocalePath = useSwitchLocalePath();
+	const localePath = useLocalePath();
 
-const links = computed(() => [
-  { label: t('nav.about'), href: '#about' },
-  { label: t('nav.properties'), href: '#video' },
-  { label: t('nav.philosophy'), href: '#philosophy' },
-  { label: t('nav.services'), href: '#services' },
-]);
+	const links = computed(() => [
+		{ label: t('nav.about'), href: '#about' },
+		{ label: t('nav.properties'), href: '#video' },
+		{ label: t('nav.philosophy'), href: '#philosophy' },
+		{ label: t('nav.services'), href: '#services' },
+	]);
 
-const open = ref(false);
+	const open = ref(false);
 
-const scrolled = ref(false);
-useEventListener(
-  'scroll',
-  () => {
-    scrolled.value = window.scrollY > 60;
-  },
-  { passive: true },
-);
+	const scrolled = ref(false);
+	onMounted(() => {
+		scrolled.value = window.scrollY > 60;
+	});
+	useEventListener(
+		'scroll',
+		() => {
+			scrolled.value = window.scrollY > 60;
+		},
+		{ passive: true }
+	);
 
-const langOpen = ref(false);
-const langDropdownEl = ref<HTMLElement | null>(null);
+	const langOpen = ref(false);
+	const langDropdownEl = ref<HTMLElement | null>(null);
 
-onClickOutside(langDropdownEl, () => {
-  langOpen.value = false;
-});
+	onClickOutside(langDropdownEl, () => {
+		langOpen.value = false;
+	});
 
-const route = useRoute();
-watch(
-  () => route.fullPath,
-  () => {
-    langOpen.value = false;
-  },
-);
+	const route = useRoute();
+	watch(
+		() => route.fullPath,
+		() => {
+			langOpen.value = false;
+		}
+	);
 
-useEventListener('keydown', (e: KeyboardEvent) => {
-  if (e.key === 'Escape') langOpen.value = false;
-});
+	useEventListener('keydown', (e: KeyboardEvent) => {
+		if (e.key === 'Escape') langOpen.value = false;
+	});
 </script>
 
 <style scoped>
-.drawer-enter-active,
-.drawer-leave-active {
-  transition: opacity 0.3s ease;
-}
-.drawer-enter-from,
-.drawer-leave-to {
-  opacity: 0;
-}
+	.drawer-enter-active,
+	.drawer-leave-active {
+		transition: opacity 0.3s ease;
+	}
+	.drawer-enter-from,
+	.drawer-leave-to {
+		opacity: 0;
+	}
 
-.dropdown-enter-active,
-.dropdown-leave-active {
-  transition:
-    opacity 0.15s ease,
-    transform 0.15s ease;
-}
-.dropdown-enter-from,
-.dropdown-leave-to {
-  opacity: 0;
-  transform: translateY(-6px);
-}
+	.dropdown-enter-active,
+	.dropdown-leave-active {
+		transition:
+			opacity 0.15s ease,
+			transform 0.15s ease;
+	}
+	.dropdown-enter-from,
+	.dropdown-leave-to {
+		opacity: 0;
+		transform: translateY(-6px);
+	}
 </style>

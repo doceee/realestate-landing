@@ -35,10 +35,10 @@ realestate/
 
 The app uses `@nuxtjs/i18n` v10 with `strategy: 'prefix'`:
 
-| URL | Locale |
-|-----|--------|
+| URL    | Locale            |
+| ------ | ----------------- |
 | `/en/` | English (default) |
-| `/pl/` | Polish |
+| `/pl/` | Polish            |
 
 Visiting `/` redirects to `/en/` automatically (Nitro route rule).
 
@@ -55,18 +55,18 @@ Visiting `/` redirects to `/en/` automatically (Nitro route rule).
 
 ## ✨ Tailwind animations
 
-| Class                  | Effect                                          |
-|------------------------|-------------------------------------------------|
-| `animate-slide-up`     | Hero headline slides up from below             |
-| `animate-fade-up`      | Hero elements fade + translateY                |
-| `animate-nav-in`       | Navbar slides in from top                      |
-| `animate-float-slow`   | Gentle float (7s loop)                         |
-| `.line-draw`           | Horizontal lines draw left-to-right            |
-| `.reveal`              | Scroll-triggered fadeUp (IntersectionObserver) |
-| `.reveal-scale`        | Scroll-triggered scale 0.94 → 1               |
-| `.glass`               | Liquid-glass effect (blur + border)            |
-| `.text-shimmer`        | Gold shimmer on text                           |
-| `d-100…d-800`          | Transition/animation delay utilities           |
+| Class                | Effect                                         |
+| -------------------- | ---------------------------------------------- |
+| `animate-slide-up`   | Hero headline slides up from below             |
+| `animate-fade-up`    | Hero elements fade + translateY                |
+| `animate-nav-in`     | Navbar slides in from top                      |
+| `animate-float-slow` | Gentle float (7s loop)                         |
+| `.line-draw`         | Horizontal lines draw left-to-right            |
+| `.reveal`            | Scroll-triggered fadeUp (IntersectionObserver) |
+| `.reveal-scale`      | Scroll-triggered scale 0.94 → 1                |
+| `.glass`             | Liquid-glass effect (blur + border)            |
+| `.text-shimmer`      | Gold shimmer on text                           |
+| `d-100…d-800`        | Transition/animation delay utilities           |
 
 ## 🎨 Customization
 

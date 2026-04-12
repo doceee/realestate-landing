@@ -1,34 +1,36 @@
 <template>
-  <div class="bg-stone-50">
-    <AppNav />
+	<div class="bg-stone-50">
+		<app-nav />
 
-    <main>
-      <HeroSection />
+		<main>
+			<hero-section />
 
-      <AboutSection />
+			<about-section />
 
-      <FeaturedVideoSection />
+			<featured-video-section />
 
-      <PhilosophySection />
+			<philosophy-section />
 
-      <ServicesSection />
-    </main>
+			<services-section />
+		</main>
 
-    <AppFooter />
-  </div>
+		<app-footer />
+	</div>
 </template>
 
 <script setup lang="ts">
-const { t } = useI18n();
+	const { t } = useI18n();
 
-useSeoMeta({
-  title: () => t('seo.title'),
-  description: () => t('seo.description'),
-  ogTitle: () => t('seo.title'),
-  ogDescription: () => t('seo.description'),
-});
+	useSeoMeta({
+		title: () => t('seo.title'),
+		description: () => t('seo.description'),
+		ogTitle: () => t('seo.title'),
+		ogDescription: () => t('seo.description'),
+	});
 
-const { revealAll } = useReveal();
+	const { revealAll } = useReveal();
 
-onMounted(() => revealAll());
+	useSectionObserver(['hero', 'about', 'video', 'philosophy', 'services']);
+
+	onMounted(() => revealAll());
 </script>

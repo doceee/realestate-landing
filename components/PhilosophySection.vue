@@ -1,71 +1,95 @@
 <template>
-  <section id="philosophy" class="relative py-28 md:py-44 bg-stone-100 overflow-hidden">
+	<section
+		id="philosophy"
+		class="relative overflow-hidden bg-stone-100 py-28 md:py-44"
+	>
+		<div
+			class="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 select-none pr-8 font-serif text-[28rem] leading-none text-stone-900 opacity-[0.04]"
+		>
+			M
+		</div>
 
-    <!-- Large decorative serif letter -->
-    <div class="absolute right-0 top-1/2 -translate-y-1/2 opacity-[0.04] font-serif text-[28rem] leading-none text-stone-900 pointer-events-none select-none pr-8">
-      M
-    </div>
+		<div class="mx-auto max-w-6xl px-6 md:px-12">
+			<div class="mb-20 flex items-center gap-6 reveal">
+				<div class="line-draw h-px flex-1 bg-stone-300" />
+				<span
+					class="flex-shrink-0 font-sans text-[0.68rem] uppercase tracking-[0.3em] text-stone-400"
+				>
+					{{ t('philosophy.eyebrow') }}
+				</span>
+				<div class="line-draw h-px flex-1 bg-stone-300" />
+			</div>
 
-    <div class="max-w-6xl mx-auto px-6 md:px-12">
+			<div class="mx-auto max-w-4xl text-center">
+				<p
+					class="text-[clamp(1.8rem,4vw,3.2rem)] leading-[1.25] tracking-[-0.01em] text-stone-800 font-serif-italic reveal d-100"
+				>
+					"{{ t('philosophy.quoteBody') }}
+					<span class="text-gold-light">
+						{{ t('philosophy.quoteHighlight') }}
+					</span>
+					"
+				</p>
 
-      <!-- Top rule + label -->
-      <div class="flex items-center gap-6 mb-20 reveal">
-        <div class="h-px flex-1 bg-stone-300 line-draw" />
-        <span class="text-stone-400 text-[0.68rem] tracking-[0.3em] uppercase font-sans flex-shrink-0">
-          {{ t('philosophy.eyebrow') }}
-        </span>
-        <div class="h-px flex-1 bg-stone-300 line-draw" />
-      </div>
+				<div
+					class="mt-10 flex items-center justify-center gap-6 reveal d-300"
+				>
+					<div class="line-draw h-px w-16" />
+					<div class="flex flex-col items-center gap-1">
+						<span class="font-serif text-[1rem] text-stone-700">
+							Aleksandra Wierzbicka
+						</span>
+						<span
+							class="font-sans text-[0.75rem] font-light uppercase tracking-[0.1em] text-stone-700"
+						>
+							{{ t('philosophy.authorTitle') }}
+						</span>
+					</div>
+					<div class="line-draw h-px w-16" />
+				</div>
+			</div>
 
-      <!-- Central quote block -->
-      <div class="max-w-4xl mx-auto text-center">
-        <p class="font-serif-italic text-[clamp(1.8rem,4vw,3.2rem)] text-stone-800 leading-[1.25] tracking-[-0.01em] reveal d-100">
-          "{{ t('philosophy.quoteBody') }}
-          <span class="text-gold-DEFAULT">{{ t('philosophy.quoteHighlight') }}</span>"
-        </p>
+			<div
+				class="mt-28 grid gap-12 border-t border-stone-200 pt-16 md:grid-cols-3 md:gap-8"
+			>
+				<div
+					v-for="(pillar, i) in pillars"
+					:key="pillar.title"
+					class="reveal"
+					:class="`d-${(i + 1) * 100}`"
+				>
+					<span
+						class="mb-4 block select-none text-[4rem] leading-none font-serif-italic"
+					>
+						{{ pillar.roman }}
+					</span>
+					<h3
+						class="mb-3 font-serif text-[1.4rem] leading-snug text-stone-900"
+					>
+						{{ pillar.title }}
+					</h3>
+					<div class="line-draw mb-4 h-px w-8" />
+					<p
+						class="font-sans text-[0.9rem] font-light leading-[1.8] text-stone-700"
+					>
+						{{ pillar.desc }}
+					</p>
+				</div>
+			</div>
 
-        <div class="flex items-center justify-center gap-6 mt-10 reveal d-300">
-          <div class="h-px w-16 bg-gold-DEFAULT line-draw" />
-          <div class="flex flex-col items-center gap-1">
-            <span class="font-serif text-stone-700 text-[1rem]">Aleksandra Wierzbicka</span>
-            <span class="font-sans font-light text-stone-400 text-[0.75rem] tracking-[0.1em] uppercase">{{ t('philosophy.authorTitle') }}</span>
-          </div>
-          <div class="h-px w-16 bg-gold-DEFAULT line-draw" />
-        </div>
-      </div>
-
-      <!-- Three pillars -->
-      <div class="grid md:grid-cols-3 gap-12 md:gap-8 mt-28 border-t border-stone-200 pt-16">
-        <div
-          v-for="(pillar, i) in pillars"
-          :key="pillar.title"
-          class="reveal"
-          :class="`d-${(i + 1) * 100}`"
-        >
-          <!-- Roman numeral -->
-          <span class="block font-serif-italic text-gold-DEFAULT/40 text-[4rem] leading-none mb-4 select-none">
-            {{ pillar.roman }}
-          </span>
-          <h3 class="font-serif text-stone-900 text-[1.4rem] mb-3 leading-snug">{{ pillar.title }}</h3>
-          <div class="h-px w-8 bg-gold-DEFAULT mb-4 line-draw" />
-          <p class="font-sans font-light text-stone-500 text-[0.9rem] leading-[1.8]">{{ pillar.desc }}</p>
-        </div>
-      </div>
-
-      <!-- Bottom rule -->
-      <div class="h-px bg-stone-200 mt-20 line-draw reveal d-400" />
-    </div>
-  </section>
+			<div class="line-draw mt-20 h-px bg-stone-200 reveal d-400" />
+		</div>
+	</section>
 </template>
 
 <script setup lang="ts">
-const { t } = useI18n()
-const ROMANS = ['I.', 'II.', 'III.']
-const pillars = computed(() =>
-  ROMANS.map((roman, i) => ({
-    roman,
-    title: t(`philosophy.pillars[${i}].title`),
-    desc:  t(`philosophy.pillars[${i}].desc`),
-  }))
-)
+	const { t } = useI18n();
+	const ROMANS = ['I.', 'II.', 'III.'];
+	const pillars = computed(() =>
+		ROMANS.map((roman, i) => ({
+			roman,
+			title: t(`philosophy.pillars[${i}].title`),
+			desc: t(`philosophy.pillars[${i}].desc`),
+		}))
+	);
 </script>
