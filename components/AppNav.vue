@@ -1,6 +1,6 @@
 <template>
 	<header
-		class="pointer-events-none fixed left-0 right-0 top-0 z-20 flex justify-center px-4 pt-5"
+		class="pointer-events-none fixed left-0 right-0 top-0 z-30 flex justify-center px-4 pt-5"
 	>
 		<nav
 			class="pointer-events-auto flex w-full max-w-5xl animate-nav-in items-center justify-between rounded-full px-6 py-3 transition-all duration-500"
@@ -25,15 +25,15 @@
 
 			<ul class="hidden list-none items-center gap-8 md:flex">
 				<li v-for="link in links" :key="link.href">
-					<a
-						:href="link.href"
+					<nuxt-link
+						:to="link.href"
 						class="group relative text-[0.8rem] uppercase tracking-[0.08em] text-white/70 no-underline transition-colors duration-300 hover:text-white"
 					>
 						{{ link.label }}
 						<span
 							class="absolute -bottom-[2px] left-0 h-[1px] w-0 transition-all duration-300 group-hover:w-full"
 						/>
-					</a>
+					</nuxt-link>
 				</li>
 			</ul>
 
@@ -112,17 +112,17 @@
 	<transition name="drawer">
 		<div
 			v-if="open"
-			class="fixed inset-0 z-10 flex flex-col items-center justify-center gap-10 glass-dark md:hidden"
+			class="fixed inset-0 z-20 flex flex-col items-center justify-center gap-10 glass-dark md:hidden"
 		>
-			<a
+			<nuxt-link
 				v-for="link in links"
 				:key="link.href"
-				:href="link.href"
+				:to="link.href"
 				class="font-serif text-3xl text-white no-underline transition-colors duration-300"
 				@click="open = false"
 			>
 				{{ link.label }}
-			</a>
+			</nuxt-link>
 
 			<div class="mt-2 flex items-center gap-3">
 				<nuxt-link

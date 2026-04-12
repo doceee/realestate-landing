@@ -9,7 +9,7 @@ export function useSectionObserver(sectionIds: string[]) {
 					const id = entry.target.id;
 					const base = window.location.pathname;
 					const next = id === 'hero' ? base : `${base}#${id}`;
-					history.replaceState(null, '', next);
+					history.replaceState(history.state, '', next);
 				});
 			},
 			{ rootMargin: '-50% 0px -50% 0px', threshold: 0 }
