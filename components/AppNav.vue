@@ -83,7 +83,7 @@
 				</div>
 
 				<a
-					href="#contact"
+					href="#"
 					class="inline-flex items-center gap-2 rounded-full bg-gold-light px-5 py-[9px] text-[0.78rem] font-medium uppercase tracking-[0.1em] text-stone-950 no-underline transition-all duration-300 hover:shadow-[0_4px_20px_rgba(184,154,106,0.4)]"
 				>
 					{{ t('nav.cta') }}
@@ -138,7 +138,7 @@
 			</div>
 
 			<a
-				href="#contact"
+				href="#"
 				class="mt-4 rounded-full px-8 py-3 text-sm font-medium uppercase tracking-wider text-stone-950 no-underline"
 				@click="open = false"
 			>
