@@ -60,6 +60,9 @@ export default {
 				/* Number ticker */
 				'count-up': 'countUp 0.7s cubic-bezier(0.16,1,0.3,1) both',
 
+				/* Scroll indicator */
+				'scroll-drop': 'scrollDrop 1.8s ease-in-out infinite',
+
 				/* Border trace */
 				'border-trace': 'borderTrace 1.5s ease both',
 			},
@@ -118,6 +121,12 @@ export default {
 				underlineGrow: {
 					from: { transform: 'scaleX(0)', transformOrigin: 'left' },
 					to: { transform: 'scaleX(1)', transformOrigin: 'left' },
+				},
+				scrollDrop: {
+					'0%': { transform: 'translateY(-100%)', opacity: '0' },
+					'20%': { opacity: '1' },
+					'80%': { opacity: '1' },
+					'100%': { transform: 'translateY(200%)', opacity: '0' },
 				},
 			},
 			transitionTimingFunction: {

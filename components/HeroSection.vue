@@ -117,7 +117,7 @@
 		>
 			<div class="relative h-12 w-[1px] overflow-hidden bg-white/20">
 				<div
-					class="absolute left-0 top-0 h-1/2 w-full animate-[scrollDrop_1.8s_ease-in-out_infinite]"
+					class="absolute left-0 top-0 h-1/2 w-full animate-[scrollDrop_1.8s_ease-in-out_infinite] bg-white/70"
 				/>
 			</div>
 			<span
