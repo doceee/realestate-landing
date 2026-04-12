@@ -62,6 +62,6 @@ export default defineNuxtConfig({
 		langDir: 'locales',
 		defaultLocale: 'en',
 		strategy: 'prefix',
-		baseUrl: process.env.NUXT_PUBLIC_BASE_URL ?? 'https://Maison.com',
+		baseUrl: process.env.NUXT_PUBLIC_BASE_URL ?? 'http://localhost:3000',
 	},
 });

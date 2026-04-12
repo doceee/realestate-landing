@@ -37,9 +37,9 @@
 			<div
 				class="mb-8 inline-flex animate-fade-in items-center gap-3 d-300"
 			>
-				<span class="h-px w-10" />
+				<span class="h-px w-10 bg-stone-50" />
 				<span
-					class="font-sans text-[0.7rem] uppercase tracking-[0.25em]"
+					class="font-sans text-[0.7rem] uppercase tracking-[0.25em] text-stone-50"
 				>
 					Est. 2008 · Warsaw
 				</span>
