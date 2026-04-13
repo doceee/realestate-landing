@@ -25,7 +25,7 @@ export default withNuxt(
 			'vue/multi-word-component-names': 'off',
 			'vue/html-self-closing': 'off',
 			'vue/component-name-in-template-casing': ['error', 'kebab-case'],
-
+			'vue/max-attributes-per-line': 'off',
 			'no-console':
 				process.env.NODE_ENV === 'production' ? 'warn' : 'off',
 			'no-debugger':

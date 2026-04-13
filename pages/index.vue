@@ -32,7 +32,14 @@
 
 	const { revealAll } = useReveal();
 
-	useSectionObserver(['hero', 'about', 'video', 'philosophy', 'services', 'contact']);
+	useSectionObserver([
+		'hero',
+		'about',
+		'video',
+		'philosophy',
+		'services',
+		'contact',
+	]);
 
 	onMounted(() => revealAll());
 </script>

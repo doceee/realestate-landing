@@ -68,12 +68,21 @@ export default {
 			},
 			keyframes: {
 				fadeUp: {
-					from: { opacity: '0', transform: 'translateY(32px)' },
+					from: {
+						opacity: '0',
+						transform: 'translateY(32px)',
+					},
 					to: { opacity: '1', transform: 'translateY(0)' },
 				},
-				fadeIn: { from: { opacity: '0' }, to: { opacity: '1' } },
+				fadeIn: {
+					from: { opacity: '0' },
+					to: { opacity: '1' },
+				},
 				slideUp: {
-					from: { opacity: '0', transform: 'translateY(60px)' },
+					from: {
+						opacity: '0',
+						transform: 'translateY(60px)',
+					},
 					to: { opacity: '1', transform: 'translateY(0)' },
 				},
 				scaleIn: {
@@ -91,15 +100,24 @@ export default {
 					},
 				},
 				navIn: {
-					from: { opacity: '0', transform: 'translateY(-16px)' },
+					from: {
+						opacity: '0',
+						transform: 'translateY(-16px)',
+					},
 					to: { opacity: '1', transform: 'translateY(0)' },
 				},
 				cardRise: {
-					from: { opacity: '0', transform: 'translateY(40px)' },
+					from: {
+						opacity: '0',
+						transform: 'translateY(40px)',
+					},
 					to: { opacity: '1', transform: 'translateY(0)' },
 				},
 				countUp: {
-					from: { opacity: '0', transform: 'translateY(14px)' },
+					from: {
+						opacity: '0',
+						transform: 'translateY(14px)',
+					},
 					to: { opacity: '1', transform: 'translateY(0)' },
 				},
 				floatSlow: {
@@ -111,22 +129,40 @@ export default {
 					'100%': { backgroundPosition: '200% center' },
 				},
 				lineGrow: {
-					from: { transform: 'scaleX(0)', transformOrigin: 'left' },
-					to: { transform: 'scaleX(1)', transformOrigin: 'left' },
+					from: {
+						transform: 'scaleX(0)',
+						transformOrigin: 'left',
+					},
+					to: {
+						transform: 'scaleX(1)',
+						transformOrigin: 'left',
+					},
 				},
 				borderTrace: {
 					from: { clipPath: 'inset(0 100% 0 0)' },
 					to: { clipPath: 'inset(0 0% 0 0)' },
 				},
 				underlineGrow: {
-					from: { transform: 'scaleX(0)', transformOrigin: 'left' },
-					to: { transform: 'scaleX(1)', transformOrigin: 'left' },
+					from: {
+						transform: 'scaleX(0)',
+						transformOrigin: 'left',
+					},
+					to: {
+						transform: 'scaleX(1)',
+						transformOrigin: 'left',
+					},
 				},
 				scrollDrop: {
-					'0%': { transform: 'translateY(-100%)', opacity: '0' },
+					'0%': {
+						transform: 'translateY(-100%)',
+						opacity: '0',
+					},
 					'20%': { opacity: '1' },
 					'80%': { opacity: '1' },
-					'100%': { transform: 'translateY(200%)', opacity: '0' },
+					'100%': {
+						transform: 'translateY(200%)',
+						opacity: '0',
+					},
 				},
 			},
 			transitionTimingFunction: {
@@ -143,7 +179,6 @@ export default {
 			) => void;
 		}) {
 			addUtilities({
-				/* Liquid glass */
 				'.glass': {
 					background: 'rgba(255,255,255,0.08)',
 					backdropFilter: 'blur(20px) saturate(180%)',
@@ -156,7 +191,6 @@ export default {
 					'-webkit-backdrop-filter': 'blur(20px) saturate(160%)',
 					border: '1px solid rgba(255,255,255,0.08)',
 				},
-				/* Text utilities */
 				'.text-gold-gradient': {
 					background:
 						'linear-gradient(135deg, #d4b98a 0%, #b89a6a 50%, #8c7248 100%)',
@@ -168,28 +202,54 @@ export default {
 					fontFamily: '"Instrument Serif", Georgia, serif',
 					fontStyle: 'italic',
 				},
-				/* Reveal helpers */
 				'.reveal': {
 					opacity: '0',
 					transform: 'translateY(32px)',
 					transition:
 						'opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1)',
 				},
-				'.reveal.show': { opacity: '1', transform: 'translateY(0)' },
+				'.reveal.show': {
+					opacity: '1',
+					transform: 'translateY(0)',
+				},
 				'.reveal-fade': {
 					opacity: '0',
 					transition: 'opacity 0.9s ease',
 				},
 				'.reveal-fade.show': { opacity: '1' },
-				/* Stagger delays */
-				'.d-100': { transitionDelay: '100ms', animationDelay: '100ms' },
-				'.d-200': { transitionDelay: '200ms', animationDelay: '200ms' },
-				'.d-300': { transitionDelay: '300ms', animationDelay: '300ms' },
-				'.d-400': { transitionDelay: '400ms', animationDelay: '400ms' },
-				'.d-500': { transitionDelay: '500ms', animationDelay: '500ms' },
-				'.d-600': { transitionDelay: '600ms', animationDelay: '600ms' },
-				'.d-700': { transitionDelay: '700ms', animationDelay: '700ms' },
-				'.d-800': { transitionDelay: '800ms', animationDelay: '800ms' },
+
+				'.d-100': {
+					transitionDelay: '100ms',
+					animationDelay: '100ms',
+				},
+				'.d-200': {
+					transitionDelay: '200ms',
+					animationDelay: '200ms',
+				},
+				'.d-300': {
+					transitionDelay: '300ms',
+					animationDelay: '300ms',
+				},
+				'.d-400': {
+					transitionDelay: '400ms',
+					animationDelay: '400ms',
+				},
+				'.d-500': {
+					transitionDelay: '500ms',
+					animationDelay: '500ms',
+				},
+				'.d-600': {
+					transitionDelay: '600ms',
+					animationDelay: '600ms',
+				},
+				'.d-700': {
+					transitionDelay: '700ms',
+					animationDelay: '700ms',
+				},
+				'.d-800': {
+					transitionDelay: '800ms',
+					animationDelay: '800ms',
+				},
 			});
 		},
 	],

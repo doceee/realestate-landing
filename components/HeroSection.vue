@@ -45,14 +45,14 @@
 				</span>
 			</div>
 
-			<h1 class="mb-6 leading-[1.02] tracking-[-0.01em] text-white">
+			<h1 class="mb-6 leading-[1.2] tracking-[-0.01em] text-white">
 				<span
 					class="block animate-slide-up font-serif text-[clamp(3rem,8vw,7.5rem)] d-100"
 				>
 					{{ t('hero.headline1') }}
 				</span>
 				<span
-					class="block animate-slide-up text-[clamp(3rem,8vw,7.5rem)] font-serif-italic d-200"
+					class="block animate-slide-up text-[clamp(3rem,8vw,7.5rem)] text-gold-gradient font-serif-italic d-200"
 				>
 					{{ t('hero.headline2') }}
 				</span>

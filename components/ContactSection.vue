@@ -56,7 +56,7 @@
 							{{ t('contact.headline1') }}
 						</span>
 						<span
-							class="block text-[clamp(2rem,4vw,3.5rem)] leading-[1.1] text-gold-light font-serif-italic"
+							class="block text-[clamp(2rem,4vw,3.5rem)] leading-[1.1] text-gold-gradient font-serif-italic"
 						>
 							{{ t('contact.headline2') }}
 						</span>
