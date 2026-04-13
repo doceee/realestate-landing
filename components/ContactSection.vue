@@ -43,7 +43,7 @@
 					<div class="mb-6 flex items-center gap-4 reveal">
 						<div class="line-draw h-px w-10 bg-gold-light/40" />
 						<span
-							class="font-sans text-[0.68rem] uppercase tracking-[0.25em] text-white/40"
+							class="font-sans text-[0.68rem] uppercase tracking-[0.25em] text-white/60"
 						>
 							{{ t('contact.eyebrow') }}
 						</span>
@@ -84,20 +84,20 @@
 								type="text"
 								required
 								:placeholder="t('contact.namePlaceholder')"
-								class="focus:bg-white/8 w-full rounded-sm border border-white/10 bg-white/5 px-5 py-4 font-sans text-[0.9rem] text-white placeholder-white/30 outline-none transition-colors duration-200 focus:border-gold-light/50"
+								class="focus:bg-white/8 w-full rounded-sm border border-white/10 bg-white/5 px-5 py-4 font-sans text-[0.9rem] text-white placeholder-white/50 outline-none transition-colors duration-200 focus:border-gold-light/50"
 							/>
 							<input
 								v-model="form.email"
 								type="email"
 								required
 								:placeholder="t('contact.emailPlaceholder')"
-								class="focus:bg-white/8 w-full rounded-sm border border-white/10 bg-white/5 px-5 py-4 font-sans text-[0.9rem] text-white placeholder-white/30 outline-none transition-colors duration-200 focus:border-gold-light/50"
+								class="focus:bg-white/8 w-full rounded-sm border border-white/10 bg-white/5 px-5 py-4 font-sans text-[0.9rem] text-white placeholder-white/50 outline-none transition-colors duration-200 focus:border-gold-light/50"
 							/>
 							<textarea
 								v-model="form.message"
 								rows="5"
 								:placeholder="t('contact.messagePlaceholder')"
-								class="focus:bg-white/8 w-full resize-none rounded-sm border border-white/10 bg-white/5 px-5 py-4 font-sans text-[0.9rem] text-white placeholder-white/30 outline-none transition-colors duration-200 focus:border-gold-light/50"
+								class="focus:bg-white/8 w-full resize-none rounded-sm border border-white/10 bg-white/5 px-5 py-4 font-sans text-[0.9rem] text-white placeholder-white/50 outline-none transition-colors duration-200 focus:border-gold-light/50"
 							/>
 							<button
 								type="submit"

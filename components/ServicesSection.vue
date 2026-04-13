@@ -28,7 +28,7 @@
 					</h2>
 				</div>
 				<p
-					class="font-sans text-[1rem] font-light leading-[1.8] text-stone-500 reveal d-200 md:pb-3"
+					class="font-sans text-[1rem] font-light leading-[1.8] text-stone-600 reveal d-200 md:pb-3"
 				>
 					{{ t('services.subtext') }}
 				</p>
@@ -61,7 +61,7 @@
 						{{ service.title }}
 					</h3>
 					<p
-						class="font-sans text-[0.88rem] font-light leading-[1.7] text-stone-500 transition-colors duration-500 group-hover:text-stone-300"
+						class="font-sans text-[0.88rem] font-light leading-[1.7] text-stone-600 transition-colors duration-500 group-hover:text-stone-300"
 					>
 						{{ service.desc }}
 					</p>

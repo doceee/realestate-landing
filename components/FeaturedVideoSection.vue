@@ -74,7 +74,9 @@
 						muted
 						playsinline
 						preload="metadata"
-					/>
+					>
+						<track kind="captions" />
+					</video>
 
 					<transition name="overlay">
 						<div

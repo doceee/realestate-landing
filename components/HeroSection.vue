@@ -3,13 +3,6 @@
 		id="hero"
 		class="relative flex min-h-screen flex-col items-center justify-end overflow-hidden bg-stone-950"
 	>
-		<!-- ── VIDEO BACKGROUND ── -->
-		<!--
-      • translate-y-[calc(17%+100px)]  — shifted down as specified
-      • object-cover                    — covers full section
-      • opacity starts at 0, fades in via requestAnimationFrame on canplay
-      • fades out when 0.55s remain, then resets + replays (custom loop, no loop attr)
-    -->
 		<video
 			ref="videoEl"
 			:src="VIDEO_URL"
@@ -22,7 +15,9 @@
 			@canplay="onCanPlay"
 			@timeupdate="onTimeUpdate"
 			@ended="onEnded"
-		/>
+		>
+			<track kind="captions" />
+		</video>
 
 		<div
 			class="pointer-events-none absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/30 to-stone-950/20"
@@ -103,7 +98,7 @@
 						{{ stat.value }}
 					</span>
 					<span
-						class="font-sans text-[0.72rem] uppercase tracking-[0.12em] text-white/40"
+						class="font-sans text-[0.72rem] uppercase tracking-[0.12em] text-white/60"
 					>
 						{{ stat.label }}
 					</span>
@@ -120,7 +115,7 @@
 				/>
 			</div>
 			<span
-				class="font-sans text-[0.6rem] uppercase tracking-[0.2em] text-white/30"
+				class="font-sans text-[0.6rem] uppercase tracking-[0.2em] text-white/60"
 			>
 				{{ t('hero.scroll') }}
 			</span>

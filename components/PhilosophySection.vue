@@ -13,7 +13,7 @@
 			<div class="mb-20 flex items-center gap-6 reveal">
 				<div class="line-draw h-px flex-1 bg-stone-300" />
 				<span
-					class="flex-shrink-0 font-sans text-[0.68rem] uppercase tracking-[0.3em] text-stone-400"
+					class="flex-shrink-0 font-sans text-[0.68rem] uppercase tracking-[0.3em] text-stone-600"
 				>
 					{{ t('philosophy.eyebrow') }}
 				</span>

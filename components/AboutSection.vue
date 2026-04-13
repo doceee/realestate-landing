@@ -148,9 +148,9 @@
 								>
 									{{ val.title }}
 								</span>
-								<span class="mx-2 text-stone-400">—</span>
+								<span class="mx-2 text-stone-600">—</span>
 								<span
-									class="font-sans text-[0.9rem] font-light text-stone-500"
+									class="font-sans text-[0.9rem] font-light text-stone-600"
 								>
 									{{ val.desc }}
 								</span>
