@@ -109,22 +109,6 @@ body {
 	animation-delay: 800ms;
 }
 
-/* ── Gold shimmer text ── */
-.text-shimmer {
-	background: linear-gradient(
-		90deg,
-		#b89a6a 0%,
-		#e8d5a8 35%,
-		#b89a6a 60%,
-		#d4b98a 100%
-	);
-	background-size: 200% auto;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-clip: text;
-	animation: shimmer 4s linear infinite;
-}
-
 /* ── Line draw animation ── */
 .line-draw {
 	transform: scaleX(0);
