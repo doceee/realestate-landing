@@ -72,7 +72,7 @@
 				</div>
 
 				<div class="reveal d-200">
-					<Transition name="fade" mode="out-in">
+					<transition name="fade" mode="out-in">
 						<form
 							v-if="!sent"
 							key="form"
@@ -84,20 +84,23 @@
 								type="text"
 								required
 								:placeholder="t('contact.namePlaceholder')"
-								class="focus:bg-white/8 w-full rounded-sm border border-white/10 bg-white/5 px-5 py-4 font-sans text-[0.9rem] text-white placeholder-white/50 outline-none transition-colors duration-200 focus:border-gold-light/50"
+								:aria-label="t('contact.namePlaceholder')"
+								class="w-full rounded-sm border border-white/10 bg-white/5 px-5 py-4 font-sans text-[0.9rem] text-white placeholder-white/50 outline-none transition-colors duration-200 focus:border-gold-light/50 focus:bg-white/10"
 							/>
 							<input
 								v-model="form.email"
 								type="email"
 								required
 								:placeholder="t('contact.emailPlaceholder')"
-								class="focus:bg-white/8 w-full rounded-sm border border-white/10 bg-white/5 px-5 py-4 font-sans text-[0.9rem] text-white placeholder-white/50 outline-none transition-colors duration-200 focus:border-gold-light/50"
+								:aria-label="t('contact.emailPlaceholder')"
+								class="w-full rounded-sm border border-white/10 bg-white/5 px-5 py-4 font-sans text-[0.9rem] text-white placeholder-white/50 outline-none transition-colors duration-200 focus:border-gold-light/50 focus:bg-white/10"
 							/>
 							<textarea
 								v-model="form.message"
 								rows="5"
 								:placeholder="t('contact.messagePlaceholder')"
-								class="focus:bg-white/8 w-full resize-none rounded-sm border border-white/10 bg-white/5 px-5 py-4 font-sans text-[0.9rem] text-white placeholder-white/50 outline-none transition-colors duration-200 focus:border-gold-light/50"
+								:aria-label="t('contact.messagePlaceholder')"
+								class="w-full resize-none rounded-sm border border-white/10 bg-white/5 px-5 py-4 font-sans text-[0.9rem] text-white placeholder-white/50 outline-none transition-colors duration-200 focus:border-gold-light/50 focus:bg-white/10"
 							/>
 							<button
 								type="submit"
@@ -126,7 +129,7 @@
 								{{ t('contact.successSub') }}
 							</p>
 						</div>
-					</Transition>
+					</transition>
 				</div>
 			</div>
 		</div>

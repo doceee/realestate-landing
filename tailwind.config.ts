@@ -125,7 +125,7 @@ export default {
 					'50%': { transform: 'translateY(-12px)' },
 				},
 				shimmer: {
-					'0%': { backgroundPosition: '-200% center' },
+					'0%': { backgroundPosition: '0% center' },
 					'100%': { backgroundPosition: '200% center' },
 				},
 				lineGrow: {
@@ -170,87 +170,4 @@ export default {
 			},
 		},
 	},
-	plugins: [
-		function ({
-			addUtilities,
-		}: {
-			addUtilities: (
-				utilities: Record<string, Record<string, string>>
-			) => void;
-		}) {
-			addUtilities({
-				'.glass': {
-					background: 'rgba(255,255,255,0.08)',
-					backdropFilter: 'blur(20px) saturate(180%)',
-					'-webkit-backdrop-filter': 'blur(20px) saturate(180%)',
-					border: '1px solid rgba(255,255,255,0.18)',
-				},
-				'.glass-dark': {
-					background: 'rgba(20,18,14,0.55)',
-					backdropFilter: 'blur(20px) saturate(160%)',
-					'-webkit-backdrop-filter': 'blur(20px) saturate(160%)',
-					border: '1px solid rgba(255,255,255,0.08)',
-				},
-				'.text-gold-gradient': {
-					background:
-						'linear-gradient(135deg, #d4b98a 0%, #b89a6a 50%, #8c7248 100%)',
-					'-webkit-background-clip': 'text',
-					'-webkit-text-fill-color': 'transparent',
-					'background-clip': 'text',
-				},
-				'.font-serif-italic': {
-					fontFamily: '"Instrument Serif", Georgia, serif',
-					fontStyle: 'italic',
-				},
-				'.reveal': {
-					opacity: '0',
-					transform: 'translateY(32px)',
-					transition:
-						'opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1)',
-				},
-				'.reveal.show': {
-					opacity: '1',
-					transform: 'translateY(0)',
-				},
-				'.reveal-fade': {
-					opacity: '0',
-					transition: 'opacity 0.9s ease',
-				},
-				'.reveal-fade.show': { opacity: '1' },
-
-				'.d-100': {
-					transitionDelay: '100ms',
-					animationDelay: '100ms',
-				},
-				'.d-200': {
-					transitionDelay: '200ms',
-					animationDelay: '200ms',
-				},
-				'.d-300': {
-					transitionDelay: '300ms',
-					animationDelay: '300ms',
-				},
-				'.d-400': {
-					transitionDelay: '400ms',
-					animationDelay: '400ms',
-				},
-				'.d-500': {
-					transitionDelay: '500ms',
-					animationDelay: '500ms',
-				},
-				'.d-600': {
-					transitionDelay: '600ms',
-					animationDelay: '600ms',
-				},
-				'.d-700': {
-					transitionDelay: '700ms',
-					animationDelay: '700ms',
-				},
-				'.d-800': {
-					transitionDelay: '800ms',
-					animationDelay: '800ms',
-				},
-			});
-		},
-	],
 } satisfies Config;

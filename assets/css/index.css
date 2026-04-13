@@ -27,10 +27,6 @@ body {
 }
 
 /* ── Typography helpers ── */
-.font-serif {
-	font-family: 'Instrument Serif', Georgia, serif;
-	font-style: normal;
-}
 .font-serif-italic {
 	font-family: 'Instrument Serif', Georgia, serif;
 	font-style: italic;
@@ -82,27 +78,35 @@ body {
 /* stagger delays */
 .d-100 {
 	transition-delay: 100ms;
+	animation-delay: 100ms;
 }
 .d-200 {
 	transition-delay: 200ms;
+	animation-delay: 200ms;
 }
 .d-300 {
 	transition-delay: 300ms;
+	animation-delay: 300ms;
 }
 .d-400 {
 	transition-delay: 400ms;
+	animation-delay: 400ms;
 }
 .d-500 {
 	transition-delay: 500ms;
+	animation-delay: 500ms;
 }
 .d-600 {
 	transition-delay: 600ms;
+	animation-delay: 600ms;
 }
 .d-700 {
 	transition-delay: 700ms;
+	animation-delay: 700ms;
 }
 .d-800 {
 	transition-delay: 800ms;
+	animation-delay: 800ms;
 }
 
 /* ── Gold shimmer text ── */
@@ -119,14 +123,6 @@ body {
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
 	animation: shimmer 4s linear infinite;
-}
-@keyframes shimmer {
-	0% {
-		background-position: 0% center;
-	}
-	100% {
-		background-position: 200% center;
-	}
 }
 
 /* ── Line draw animation ── */
