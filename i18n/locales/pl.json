@@ -113,6 +113,18 @@
 			}
 		]
 	},
+	"contact": {
+		"eyebrow": "Skontaktuj się",
+		"headline1": "Znajdźmy razem",
+		"headline2": "Twój wymarzony dom.",
+		"sub": "Zostaw swoje dane, a jeden z naszych doradców skontaktuje się z Tobą w ciągu jednego dnia roboczego.",
+		"namePlaceholder": "Twoje imię i nazwisko",
+		"emailPlaceholder": "Twój adres e-mail",
+		"messagePlaceholder": "Opisz, czego szukasz…",
+		"submit": "Wyślij wiadomość",
+		"successTitle": "Wiadomość odebrana",
+		"successSub": "Dziękujemy — wkrótce się odezwiemy."
+	},
 	"footer": {
 		"copyright": "© {year} Maison & Co. · Wszelkie prawa zastrzeżone · Warszawa, Polska",
 		"links": ["Prywatność", "Regulamin", "Mapa strony"]

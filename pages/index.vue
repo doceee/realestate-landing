@@ -12,6 +12,8 @@
 			<philosophy-section />
 
 			<services-section />
+
+			<contact-section />
 		</main>
 
 		<app-footer />
@@ -30,7 +32,7 @@
 
 	const { revealAll } = useReveal();
 
-	useSectionObserver(['hero', 'about', 'video', 'philosophy', 'services']);
+	useSectionObserver(['hero', 'about', 'video', 'philosophy', 'services', 'contact']);
 
 	onMounted(() => revealAll());
 </script>

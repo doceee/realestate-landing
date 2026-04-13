@@ -98,8 +98,8 @@
 					</p>
 				</div>
 				<a
-					href="#"
-					class="hover: group inline-flex flex-shrink-0 items-center gap-3 rounded-full border px-8 py-4 text-[0.85rem] font-medium uppercase tracking-[0.08em] no-underline transition-all duration-300 hover:text-stone-950 hover:shadow-[0_6px_24px_rgba(184,154,106,0.3)]"
+					href="#contact"
+					class="group inline-flex flex-shrink-0 items-center gap-3 rounded-full border px-8 py-4 text-[0.85rem] font-medium uppercase tracking-[0.08em] no-underline transition-all duration-300 hover:text-stone-950 hover:shadow-[0_6px_24px_rgba(184,154,106,0.3)]"
 				>
 					{{ t('services.ctaBtn') }}
 					<span

@@ -87,7 +87,7 @@
 				</div>
 
 				<a
-					href="#"
+					href="#contact"
 					class="inline-flex items-center gap-2 rounded-full bg-gold-light px-5 py-[9px] text-[0.78rem] font-medium uppercase tracking-[0.1em] text-stone-950 no-underline transition-all duration-300 hover:shadow-[0_4px_20px_rgba(184,154,106,0.4)]"
 				>
 					{{ t('nav.cta') }}
@@ -149,7 +149,7 @@
 			</div>
 
 			<a
-				href="#"
+				href="#contact"
 				class="inline-flex items-center gap-2 rounded-full bg-gold-light px-5 py-[9px] text-[0.78rem] font-medium uppercase tracking-[0.1em] text-stone-950 no-underline transition-all duration-300 hover:shadow-[0_4px_20px_rgba(184,154,106,0.4)]"
 				@click="open = false"
 			>

@@ -113,6 +113,18 @@
 			}
 		]
 	},
+	"contact": {
+		"eyebrow": "Get in touch",
+		"headline1": "Let's find your",
+		"headline2": "perfect home.",
+		"sub": "Leave your details and one of our advisors will be in touch within one business day.",
+		"namePlaceholder": "Your name",
+		"emailPlaceholder": "Your email",
+		"messagePlaceholder": "Tell us what you're looking for…",
+		"submit": "Send message",
+		"successTitle": "Message received",
+		"successSub": "Thank you — we will be in touch shortly."
+	},
 	"footer": {
 		"copyright": "© {year} Maison & Co. · All rights reserved · Warsaw, Poland",
 		"links": ["Privacy", "Terms", "Sitemap"]
