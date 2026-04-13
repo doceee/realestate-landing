@@ -122,8 +122,8 @@
 		"emailPlaceholder": "Your email",
 		"messagePlaceholder": "Tell us what you're looking for…",
 		"submit": "Send message",
-		"successTitle": "Message received",
-		"successSub": "Thank you — we will be in touch shortly."
+		"successTitle": "Your email app should be open",
+		"successSub": "Complete and send the pre-filled message to reach us directly."
 	},
 	"footer": {
 		"copyright": "© {year} Maison & Co. · All rights reserved · Warsaw, Poland",

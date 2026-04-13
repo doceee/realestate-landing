@@ -155,7 +155,6 @@ body {
 	transform: scale(1.04);
 }
 
-/* ── Liquid glass ── */
 .glass {
 	background: rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(20px) saturate(180%);
@@ -167,4 +166,18 @@ body {
 	backdrop-filter: blur(24px) saturate(160%);
 	-webkit-backdrop-filter: blur(24px) saturate(160%);
 	border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+@layer utilities {
+	.text-gold-gradient {
+		background: linear-gradient(
+			135deg,
+			#d4b98a 0%,
+			#b89a6a 50%,
+			#8c7248 100%
+		);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
 }

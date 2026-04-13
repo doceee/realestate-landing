@@ -12,17 +12,11 @@ export default defineNuxtConfig({
 
 	app: {
 		head: {
-			title: 'Maison — Luxury Real Estate',
 			meta: [
 				{ charset: 'utf-8' },
 				{
 					name: 'viewport',
 					content: 'width=device-width, initial-scale=1',
-				},
-				{
-					name: 'description',
-					content:
-						'Exceptional properties for discerning clients. Luxury real estate redefined.',
 				},
 			],
 		},

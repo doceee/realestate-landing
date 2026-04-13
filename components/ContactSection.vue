@@ -79,7 +79,11 @@
 							class="flex flex-col gap-5"
 							@submit.prevent="handleSubmit"
 						>
+							<label for="contact-name" class="sr-only">
+								{{ t('contact.namePlaceholder') }}
+							</label>
 							<input
+								id="contact-name"
 								v-model="form.name"
 								type="text"
 								required
@@ -87,7 +91,11 @@
 								:aria-label="t('contact.namePlaceholder')"
 								class="w-full rounded-sm border border-white/10 bg-white/5 px-5 py-4 font-sans text-[0.9rem] text-white placeholder-white/50 outline-none transition-colors duration-200 focus:border-gold-light/50 focus:bg-white/10"
 							/>
+							<label for="contact-email" class="sr-only">
+								{{ t('contact.emailPlaceholder') }}
+							</label>
 							<input
+								id="contact-email"
 								v-model="form.email"
 								type="email"
 								required
@@ -95,9 +103,14 @@
 								:aria-label="t('contact.emailPlaceholder')"
 								class="w-full rounded-sm border border-white/10 bg-white/5 px-5 py-4 font-sans text-[0.9rem] text-white placeholder-white/50 outline-none transition-colors duration-200 focus:border-gold-light/50 focus:bg-white/10"
 							/>
+							<label for="contact-message" class="sr-only">
+								{{ t('contact.messagePlaceholder') }}
+							</label>
 							<textarea
+								id="contact-message"
 								v-model="form.message"
 								rows="5"
+								required
 								:placeholder="t('contact.messagePlaceholder')"
 								:aria-label="t('contact.messagePlaceholder')"
 								class="w-full resize-none rounded-sm border border-white/10 bg-white/5 px-5 py-4 font-sans text-[0.9rem] text-white placeholder-white/50 outline-none transition-colors duration-200 focus:border-gold-light/50 focus:bg-white/10"
@@ -143,7 +156,11 @@
 	const sent = ref(false);
 
 	function handleSubmit() {
-		// TODO: wire to real backend/email service
+		const subject = encodeURIComponent(`Inquiry from ${form.name}`);
+		const body = encodeURIComponent(
+			`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
+		);
+		window.location.href = `mailto:${form.email}?subject=${subject}&body=${body}`;
 		sent.value = true;
 	}
 </script>

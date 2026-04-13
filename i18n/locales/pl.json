@@ -122,8 +122,8 @@
 		"emailPlaceholder": "Twój adres e-mail",
 		"messagePlaceholder": "Opisz, czego szukasz…",
 		"submit": "Wyślij wiadomość",
-		"successTitle": "Wiadomość odebrana",
-		"successSub": "Dziękujemy — wkrótce się odezwiemy."
+		"successTitle": "Twój program pocztowy powinien być otwarty",
+		"successSub": "Uzupełnij i wyślij gotową wiadomość, aby skontaktować się z nami bezpośrednio."
 	},
 	"footer": {
 		"copyright": "© {year} Maison & Co. · Wszelkie prawa zastrzeżone · Warszawa, Polska",

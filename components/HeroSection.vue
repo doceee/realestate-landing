@@ -16,7 +16,7 @@
 			@timeupdate="onTimeUpdate"
 			@ended="onEnded"
 		>
-			<track kind="captions" />
+			<track kind="captions" src="/captions/hero.vtt" />
 		</video>
 
 		<div

@@ -7,6 +7,7 @@ export function useReveal() {
 		const els = document.querySelectorAll(
 			'.reveal, .reveal-fade, .reveal-scale, .line-draw'
 		);
+		obs?.disconnect();
 		obs = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((e) => {

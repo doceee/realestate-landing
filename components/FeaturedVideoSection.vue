@@ -31,7 +31,7 @@
 					>
 						{{ t('video.eyebrow') }}
 					</span>
-					<div class="bg-gold-DEFAULT line-draw h-px w-10" />
+					<div class="line-draw h-px w-10 bg-gold-light" />
 				</div>
 				<h2 class="reveal d-100">
 					<span
@@ -75,7 +75,7 @@
 						playsinline
 						preload="metadata"
 					>
-						<track kind="captions" />
+						<track kind="captions" src="/captions/featured.vtt" />
 					</video>
 
 					<transition name="overlay">
@@ -111,7 +111,7 @@
 						class="absolute bottom-0 left-0 right-0 h-[2px] bg-white/10"
 					>
 						<div
-							class="bg-gold-DEFAULT h-full transition-all duration-300"
+							class="h-full bg-gold-light transition-all duration-300"
 							:style="{ width: progressPct + '%' }"
 						/>
 					</div>
@@ -124,7 +124,7 @@
 				<span
 					v-for="tag in tags"
 					:key="tag"
-					class="hover:border-gold-DEFAULT hover:text-gold-DEFAULT cursor-default rounded-full border border-white/10 px-4 py-2 font-sans text-[0.72rem] uppercase tracking-[0.1em] text-white/50 transition-colors duration-300"
+					class="cursor-default rounded-full border border-white/10 px-4 py-2 font-sans text-[0.72rem] uppercase tracking-[0.1em] text-white/50 transition-colors duration-300 hover:border-gold-light hover:text-gold-light"
 				>
 					{{ tag }}
 				</span>
