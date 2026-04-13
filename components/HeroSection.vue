@@ -124,17 +124,28 @@
 </template>
 
 <script setup lang="ts">
-	const { t } = useI18n();
+	const { t, messages, locale } = useI18n();
 
-	const STAT_VALUES = ['320+', '€2.4B', '16', '94%'];
-	const stats = computed(() =>
-		STAT_VALUES.map((value, i) => ({
-			value,
+	const stats = computed(() => {
+		const localeMessages = messages.value[locale.value] as
+			| {
+					hero?: {
+						stats?: unknown[];
+					};
+			  }
+			| undefined;
+
+		const count = Array.isArray(localeMessages?.hero?.stats)
+			? localeMessages.hero.stats.length
+			: 0;
+
+		return Array.from({ length: count }, (_, i) => ({
+			value: t(`hero.stats[${i}].value`),
 			label: t(`hero.stats[${i}].label`),
-		}))
-	);
+		}));
+	});
 
-	const VIDEO_URL = 'https://assets.mixkit.co/videos/4046/4046-720.mp4';
+	const VIDEO_URL = computed(() => t('hero.videoUrl'));
 
 	const videoEl = ref<HTMLVideoElement | null>(null);
 	const videoOpacity = ref(0);

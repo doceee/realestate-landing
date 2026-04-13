@@ -28,9 +28,23 @@
 </template>
 
 <script setup lang="ts">
-	const { t } = useI18n();
+	const { t, locale, messages } = useI18n();
 	const year = new Date().getFullYear();
-	const links = computed(() =>
-		Array.from({ length: 3 }, (_, i) => t(`footer.links[${i}]`))
-	);
+	const links = computed(() => {
+		const localeMessages = messages.value[locale.value] as
+			| {
+					footer?: {
+						links?: unknown[];
+					};
+			  }
+			| undefined;
+
+		const count = Array.isArray(localeMessages?.footer?.links)
+			? localeMessages.footer.links.length
+			: 0;
+
+		return Array.from({ length: count }, (_, index) =>
+			t(`footer.links[${index}]`)
+		);
+	});
 </script>

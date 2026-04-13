@@ -69,7 +69,7 @@
 				>
 					<video
 						ref="featVid"
-						src="https://assets.mixkit.co/videos/4198/4198-720.mp4"
+						:src="t('video.videoUrl')"
 						class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
 						muted
 						playsinline
@@ -95,12 +95,12 @@
 
 							<div class="mt-6 text-center">
 								<p class="font-serif text-xl text-white">
-									Villa Solaris
+									{{ t('video.propertyName') }}
 								</p>
 								<p
 									class="mt-1 font-sans text-sm font-light tracking-wider text-white/50"
 								>
-									Warsaw Wilanów · €4.2M
+									{{ t('video.propertyPrice') }}
 								</p>
 							</div>
 						</div>
@@ -134,10 +134,22 @@
 </template>
 
 <script setup lang="ts">
-	const { t } = useI18n();
-	const tags = computed(() =>
-		Array.from({ length: 5 }, (_, i) => t(`video.tags[${i}]`))
-	);
+	const { t, messages, locale } = useI18n();
+	const tags = computed(() => {
+		const localeMessages = messages.value[locale.value] as
+			| {
+					video?: {
+						tags?: unknown[];
+					};
+			  }
+			| undefined;
+
+		const count = Array.isArray(localeMessages?.video?.tags)
+			? localeMessages.video.tags.length
+			: 0;
+
+		return Array.from({ length: count }, (_, i) => t(`video.tags[${i}]`));
+	});
 
 	const featVid = ref<HTMLVideoElement | null>(null);
 	const playing = ref(false);

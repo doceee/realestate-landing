@@ -41,6 +41,11 @@ export default defineNuxtConfig({
 
 	css: ['~/assets/css/index.css'],
 	compatibilityDate: '2024-11-01',
+	runtimeConfig: {
+		keystaticBasicAuthUser: process.env.KEYSTATIC_BASIC_AUTH_USER ?? '',
+		keystaticBasicAuthPassword:
+			process.env.KEYSTATIC_BASIC_AUTH_PASSWORD ?? '',
+	},
 
 	nitro: {
 		externals: {

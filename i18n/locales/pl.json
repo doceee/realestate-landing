@@ -14,11 +14,24 @@
 		"ctaPrimary": "Przeglądaj oferty",
 		"ctaSecondary": "Nasza historia",
 		"scroll": "Przewiń",
+		"videoUrl": "https://assets.mixkit.co/videos/4046/4046-720.mp4",
 		"stats": [
-			{ "label": "Sprzedanych nieruchomości" },
-			{ "label": "Łączna wartość transakcji" },
-			{ "label": "Lat doświadczenia" },
-			{ "label": "Lojalność klientów" }
+			{
+				"value": "320+",
+				"label": "Sprzedanych nieruchomości"
+			},
+			{
+				"value": "€2.4B",
+				"label": "Łączna wartość transakcji"
+			},
+			{
+				"value": "16",
+				"label": "Lat doświadczenia"
+			},
+			{
+				"value": "94%",
+				"label": "Lojalność klientów"
+			}
 		]
 	},
 	"about": {
@@ -47,6 +60,9 @@
 		"eyebrow": "Wyróżniona oferta",
 		"headline1": "Rezydencja godna",
 		"headline2": "Twoich ambicji.",
+		"videoUrl": "https://assets.mixkit.co/videos/4198/4198-720.mp4",
+		"propertyName": "Villa Solaris",
+		"propertyPrice": "Warszawa Wilanów · 4,2 mln €",
 		"tags": [
 			"5 sypialni",
 			"480 m²",

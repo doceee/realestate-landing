@@ -114,11 +114,23 @@
 </template>
 
 <script setup lang="ts">
-	const { t } = useI18n();
-	const services = computed(() =>
-		Array.from({ length: 6 }, (_, i) => ({
+	const { t, messages, locale } = useI18n();
+	const services = computed(() => {
+		const localeMessages = messages.value[locale.value] as
+			| {
+					services?: {
+						items?: unknown[];
+					};
+			  }
+			| undefined;
+
+		const count = Array.isArray(localeMessages?.services?.items)
+			? localeMessages.services.items.length
+			: 0;
+
+		return Array.from({ length: count }, (_, i) => ({
 			title: t(`services.items[${i}].title`),
 			desc: t(`services.items[${i}].desc`),
-		}))
-	);
+		}));
+	});
 </script>

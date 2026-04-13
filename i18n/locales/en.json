@@ -14,11 +14,24 @@
 		"ctaPrimary": "Explore properties",
 		"ctaSecondary": "Our story",
 		"scroll": "Scroll",
+		"videoUrl": "https://assets.mixkit.co/videos/4046/4046-720.mp4",
 		"stats": [
-			{ "label": "Properties sold" },
-			{ "label": "Total transacted" },
-			{ "label": "Years experience" },
-			{ "label": "Client retention" }
+			{
+				"value": "320+",
+				"label": "Properties sold"
+			},
+			{
+				"value": "€2.4B",
+				"label": "Total transacted"
+			},
+			{
+				"value": "16",
+				"label": "Years experience"
+			},
+			{
+				"value": "94%",
+				"label": "Client retention"
+			}
 		]
 	},
 	"about": {
@@ -47,6 +60,9 @@
 		"eyebrow": "Featured listing",
 		"headline1": "A residence worthy",
 		"headline2": "of your ambition.",
+		"videoUrl": "https://assets.mixkit.co/videos/4198/4198-720.mp4",
+		"propertyName": "Villa Solaris",
+		"propertyPrice": "Warsaw Wilanów · €4.2M",
 		"tags": [
 			"5 Bedrooms",
 			"480 m²",

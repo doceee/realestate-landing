@@ -22,8 +22,13 @@
 		"typescript": "^6.0.2"
 	},
 	"dependencies": {
+		"@keystatic/core": "0.5.50",
 		"@nuxtjs/i18n": "10.2.4",
+		"@types/react": "19.2.14",
+		"@types/react-dom": "19.2.3",
 		"@vueuse/core": "11.0.0",
-		"@vueuse/nuxt": "11.0.0"
+		"@vueuse/nuxt": "11.0.0",
+		"react": "19.2.5",
+		"react-dom": "19.2.5"
 	}
 }
