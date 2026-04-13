@@ -12,6 +12,22 @@ export default defineNuxtConfig({
 
 	app: {
 		head: {
+			link: [
+				{
+					rel: 'preload',
+					as: 'font',
+					type: 'font/woff2',
+					href: '/fonts/dm-sans-v17-latin_latin-ext-regular.woff2',
+					crossorigin: 'anonymous',
+				},
+				{
+					rel: 'preload',
+					as: 'font',
+					type: 'font/woff2',
+					href: '/fonts/instrument-serif-v5-latin_latin-ext-regular.woff2',
+					crossorigin: 'anonymous',
+				},
+			],
 			meta: [
 				{ charset: 'utf-8' },
 				{
