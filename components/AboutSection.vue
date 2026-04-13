@@ -53,11 +53,35 @@
 					<div
 						class="img-zoom relative aspect-[3/4] overflow-hidden rounded-sm bg-stone-200"
 					>
-						<img
-							src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&q=80"
-							alt="Luxury interior"
-							class="h-full w-full object-cover"
-						/>
+						<picture>
+							<source
+								type="image/avif"
+								srcset="
+									https://images.unsplash.com/photo-1613977257363-707ba9348227?w=400&q=70&fm=avif 400w,
+									https://images.unsplash.com/photo-1613977257363-707ba9348227?w=600&q=70&fm=avif 600w,
+									https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&q=70&fm=avif 800w
+								"
+								sizes="(max-width: 768px) 100vw, 50vw"
+							/>
+							<source
+								type="image/webp"
+								srcset="
+									https://images.unsplash.com/photo-1613977257363-707ba9348227?w=400&q=75&fm=webp 400w,
+									https://images.unsplash.com/photo-1613977257363-707ba9348227?w=600&q=75&fm=webp 600w,
+									https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&q=75&fm=webp 800w
+								"
+								sizes="(max-width: 768px) 100vw, 50vw"
+							/>
+							<img
+								src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&q=80"
+								alt="Luxury interior"
+								class="h-full w-full object-cover"
+								width="800"
+								height="1067"
+								loading="lazy"
+								decoding="async"
+							/>
+						</picture>
 						<div
 							class="pointer-events-none absolute inset-3 rounded-sm border"
 						/>

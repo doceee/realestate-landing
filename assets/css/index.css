@@ -1,5 +1,18 @@
-/* ── Google Fonts ── */
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+@font-face {
+	font-family: 'DM Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('/fonts/dm-sans-v17-latin_latin-ext-regular.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Instrument Serif';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('/fonts/instrument-serif-v5-latin_latin-ext-regular.woff2')
+		format('woff2');
+}
 
 @tailwind base;
 @tailwind components;

@@ -47,7 +47,7 @@
 					{{ t('hero.headline1') }}
 				</span>
 				<span
-					class="block animate-slide-up text-[clamp(3rem,8vw,7.5rem)] text-gold-gradient font-serif-italic d-200"
+					class="block animate-slide-up text-[clamp(3rem,8vw,7.5rem)] italic text-gold-gradient d-200"
 				>
 					{{ t('hero.headline2') }}
 				</span>

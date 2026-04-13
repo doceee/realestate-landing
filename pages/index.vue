@@ -5,18 +5,18 @@
 		<main>
 			<hero-section />
 
-			<about-section />
+			<lazy-about-section />
 
-			<featured-video-section />
+			<lazy-featured-video-section />
 
-			<philosophy-section />
+			<lazy-philosophy-section />
 
-			<services-section />
+			<lazy-services-section />
 
-			<contact-section />
+			<lazy-contact-section />
 		</main>
 
-		<app-footer />
+		<lazy-app-footer />
 	</div>
 </template>
 
