@@ -35,7 +35,7 @@
 					>
 						{{ link.label }}
 						<span
-							class="absolute -bottom-[2px] left-0 h-[1px] w-0 transition-all duration-300 group-hover:w-full"
+							class="absolute -bottom-[2px] left-0 h-[1px] w-0 bg-white/40 transition-all duration-300 group-hover:w-full"
 						/>
 					</nuxt-link>
 				</li>
