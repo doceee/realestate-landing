@@ -6,7 +6,7 @@
 		<div class="mx-auto max-w-7xl px-6 md:px-12">
 			<div class="mb-20 grid items-end gap-12 md:grid-cols-2 md:gap-24">
 				<div>
-					<div class="mb-6 flex items-center gap-4 reveal">
+					<div class="reveal mb-6 flex items-center gap-4">
 						<div class="line-draw h-px w-10" />
 						<span
 							class="font-sans text-[0.68rem] uppercase tracking-[0.25em]"
@@ -21,14 +21,14 @@
 							{{ t('services.headline1') }}
 						</span>
 						<span
-							class="block text-[clamp(2rem,4vw,3.5rem)] leading-[1.1] font-serif-italic"
+							class="font-serif-italic block text-[clamp(2rem,4vw,3.5rem)] leading-[1.1]"
 						>
 							{{ t('services.headline2') }}
 						</span>
 					</h2>
 				</div>
 				<p
-					class="font-sans text-[1rem] font-light leading-[1.8] text-stone-600 reveal d-200 md:pb-3"
+					class="reveal d-200 font-sans text-[1rem] font-light leading-[1.8] text-stone-600 md:pb-3"
 				>
 					{{ t('services.subtext') }}
 				</p>
@@ -38,7 +38,7 @@
 				<div
 					v-for="(service, i) in services"
 					:key="service.title"
-					class="group relative cursor-default overflow-hidden bg-stone-50 p-8 transition-colors duration-500 reveal hover:bg-stone-900 md:p-10"
+					class="reveal group relative cursor-default overflow-hidden bg-stone-50 p-8 transition-colors duration-500 hover:bg-stone-900 md:p-10"
 					:class="`d-${Math.min((i + 1) * 100, 600)}`"
 				>
 					<div
@@ -46,7 +46,7 @@
 					/>
 
 					<span
-						class="mb-6 block select-none text-[5rem] leading-none text-stone-200 transition-colors duration-500 font-serif-italic group-hover:text-stone-800"
+						class="font-serif-italic mb-6 block select-none text-[5rem] leading-none text-stone-200 transition-colors duration-500 group-hover:text-stone-800"
 					>
 						{{ String(i + 1).padStart(2, '0') }}
 					</span>
@@ -80,7 +80,7 @@
 			</div>
 
 			<div
-				class="mt-20 flex flex-col items-center justify-between gap-8 border-t border-stone-200 pt-12 reveal d-400 md:flex-row"
+				class="reveal d-400 mt-20 flex flex-col items-center justify-between gap-8 border-t border-stone-200 pt-12 md:flex-row"
 			>
 				<div>
 					<p

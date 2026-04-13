@@ -16,7 +16,7 @@
 					Maison
 				</span>
 				<span
-					class="text-lg leading-none text-stone-300 font-serif-italic"
+					class="font-serif-italic text-lg leading-none text-stone-300"
 				>
 					&
 				</span>
@@ -116,7 +116,7 @@
 	<transition name="drawer">
 		<div
 			v-if="open"
-			class="fixed inset-0 z-20 flex flex-col items-center justify-center gap-10 glass-dark md:hidden"
+			class="glass-dark fixed inset-0 z-20 flex flex-col items-center justify-center gap-10 md:hidden"
 		>
 			<nuxt-link
 				v-for="link in links"

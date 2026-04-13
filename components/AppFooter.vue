@@ -5,7 +5,7 @@
 		>
 			<div class="flex items-center gap-2">
 				<span class="font-serif text-lg text-white/70">Maison</span>
-				<span class="text-gold-DEFAULT text-lg font-serif-italic">
+				<span class="text-gold-DEFAULT font-serif-italic text-lg">
 					&
 				</span>
 				<span class="font-serif text-lg text-white/70">Co.</span>

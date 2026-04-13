@@ -24,7 +24,7 @@
 
 		<div class="mx-auto max-w-6xl px-6 md:px-12">
 			<div class="mb-16 text-center">
-				<div class="mb-6 flex items-center justify-center gap-4 reveal">
+				<div class="reveal mb-6 flex items-center justify-center gap-4">
 					<div class="line-draw h-px w-10 bg-stone-700" />
 					<span
 						class="font-sans text-[0.68rem] uppercase tracking-[0.25em] text-stone-300"
@@ -40,14 +40,14 @@
 						{{ t('video.headline1') }}
 					</span>
 					<span
-						class="block text-[clamp(2rem,5vw,4rem)] leading-[1.1] text-gold-light font-serif-italic"
+						class="font-serif-italic block text-[clamp(2rem,5vw,4rem)] leading-[1.1] text-gold-light"
 					>
 						{{ t('video.headline2') }}
 					</span>
 				</h2>
 			</div>
 
-			<div class="reveal-scale relative d-200">
+			<div class="reveal-scale d-200 relative">
 				<div
 					class="pointer-events-none absolute -inset-[1px] rounded-sm"
 					style="
@@ -84,7 +84,7 @@
 							class="absolute inset-0 flex flex-col items-center justify-center bg-stone-950/50"
 						>
 							<button
-								class="group/btn relative flex h-20 w-20 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 glass hover:scale-110 hover:bg-white/20"
+								class="group/btn glass relative flex h-20 w-20 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 hover:scale-110 hover:bg-white/20"
 								:aria-label="t('video.playAriaLabel')"
 							>
 								<span class="ml-1 text-2xl">▶</span>
@@ -119,7 +119,7 @@
 			</div>
 
 			<div
-				class="mt-10 flex flex-wrap items-center justify-center gap-4 reveal d-400"
+				class="reveal d-400 mt-10 flex flex-wrap items-center justify-center gap-4"
 			>
 				<span
 					v-for="tag in tags"

@@ -40,7 +40,7 @@
 		<div class="relative mx-auto max-w-7xl px-6 md:px-12">
 			<div class="grid gap-16 md:grid-cols-2 md:gap-24">
 				<div>
-					<div class="mb-6 flex items-center gap-4 reveal">
+					<div class="reveal mb-6 flex items-center gap-4">
 						<div class="line-draw h-px w-10 bg-gold-light/40" />
 						<span
 							class="font-sans text-[0.68rem] uppercase tracking-[0.25em] text-white/60"
@@ -49,23 +49,23 @@
 						</span>
 					</div>
 
-					<h2 class="mb-6 reveal d-100">
+					<h2 class="reveal d-100 mb-6">
 						<span
 							class="block font-serif text-[clamp(2rem,4vw,3.5rem)] leading-[1.1] text-white"
 						>
 							{{ t('contact.headline1') }}
 						</span>
 						<span
-							class="block text-[clamp(2rem,4vw,3.5rem)] leading-[1.1] text-gold-gradient font-serif-italic"
+							class="text-gold-gradient font-serif-italic block text-[clamp(2rem,4vw,3.5rem)] leading-[1.1]"
 						>
 							{{ t('contact.headline2') }}
 						</span>
 					</h2>
 
-					<div class="line-draw mb-8 h-px bg-white/10 reveal d-200" />
+					<div class="line-draw reveal d-200 mb-8 h-px bg-white/10" />
 
 					<p
-						class="font-sans text-[1rem] font-light leading-[1.8] text-white/50 reveal d-200"
+						class="reveal d-200 font-sans text-[1rem] font-light leading-[1.8] text-white/50"
 					>
 						{{ t('contact.sub') }}
 					</p>

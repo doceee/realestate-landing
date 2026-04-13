@@ -10,7 +10,7 @@
 		</div>
 
 		<div class="mx-auto max-w-6xl px-6 md:px-12">
-			<div class="mb-20 flex items-center gap-6 reveal">
+			<div class="reveal mb-20 flex items-center gap-6">
 				<div class="line-draw h-px flex-1 bg-stone-300" />
 				<span
 					class="flex-shrink-0 font-sans text-[0.68rem] uppercase tracking-[0.3em] text-stone-600"
@@ -22,7 +22,7 @@
 
 			<div class="mx-auto max-w-4xl text-center">
 				<p
-					class="text-[clamp(1.8rem,4vw,3.2rem)] leading-[1.25] tracking-[-0.01em] text-stone-800 font-serif-italic reveal d-100"
+					class="font-serif-italic reveal d-100 text-[clamp(1.8rem,4vw,3.2rem)] leading-[1.25] tracking-[-0.01em] text-stone-800"
 				>
 					"{{ t('philosophy.quoteBody') }}
 					<span class="text-gold-light">
@@ -32,7 +32,7 @@
 				</p>
 
 				<div
-					class="mt-10 flex items-center justify-center gap-6 reveal d-300"
+					class="reveal d-300 mt-10 flex items-center justify-center gap-6"
 				>
 					<div class="line-draw h-px w-16" />
 					<div class="flex flex-col items-center gap-1">
@@ -59,7 +59,7 @@
 					:class="`d-${(i + 1) * 100}`"
 				>
 					<span
-						class="mb-4 block select-none text-[4rem] leading-none font-serif-italic"
+						class="font-serif-italic mb-4 block select-none text-[4rem] leading-none"
 					>
 						{{ pillar.roman }}
 					</span>
@@ -77,7 +77,7 @@
 				</div>
 			</div>
 
-			<div class="line-draw mt-20 h-px bg-stone-200 reveal d-400" />
+			<div class="line-draw reveal d-400 mt-20 h-px bg-stone-200" />
 		</div>
 	</section>
 </template>

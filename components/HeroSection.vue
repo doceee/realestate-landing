@@ -30,7 +30,7 @@
 			class="relative z-10 mx-auto w-full max-w-7xl px-6 pb-24 md:px-12 md:pb-32"
 		>
 			<div
-				class="mb-8 inline-flex animate-fade-in items-center gap-3 d-300"
+				class="d-300 mb-8 inline-flex animate-fade-in items-center gap-3"
 			>
 				<span class="h-px w-10 bg-stone-50" />
 				<span
@@ -42,25 +42,25 @@
 
 			<h1 class="mb-6 leading-[1.2] tracking-[-0.01em] text-white">
 				<span
-					class="block animate-slide-up font-serif text-[clamp(3rem,8vw,7.5rem)] d-100"
+					class="d-100 block animate-slide-up font-serif text-[clamp(3rem,8vw,7.5rem)]"
 				>
 					{{ t('hero.headline1') }}
 				</span>
 				<span
-					class="block animate-slide-up text-[clamp(3rem,8vw,7.5rem)] italic text-gold-gradient d-200"
+					class="text-gold-gradient d-200 block animate-slide-up text-[clamp(3rem,8vw,7.5rem)] italic"
 				>
 					{{ t('hero.headline2') }}
 				</span>
 			</h1>
 
 			<p
-				class="mb-12 max-w-[44ch] animate-fade-up font-sans text-[1.05rem] font-light leading-[1.7] text-white/60 d-400"
+				class="d-400 mb-12 max-w-[44ch] animate-fade-up font-sans text-[1.05rem] font-light leading-[1.7] text-white/60"
 			>
 				{{ t('hero.sub') }}
 			</p>
 
 			<div
-				class="flex animate-fade-up flex-wrap items-center gap-5 d-500"
+				class="d-500 flex animate-fade-up flex-wrap items-center gap-5"
 			>
 				<a
 					href="#services"
@@ -85,7 +85,7 @@
 			</div>
 
 			<div
-				class="mt-16 flex animate-fade-up flex-wrap gap-10 border-t border-white/10 pt-10 d-600"
+				class="d-600 mt-16 flex animate-fade-up flex-wrap gap-10 border-t border-white/10 pt-10"
 			>
 				<div
 					v-for="stat in stats"
@@ -107,7 +107,7 @@
 		</div>
 
 		<div
-			class="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 animate-fade-in flex-col items-center gap-2 d-800"
+			class="d-800 absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 animate-fade-in flex-col items-center gap-2"
 		>
 			<div class="relative h-12 w-[1px] overflow-hidden bg-white/20">
 				<div

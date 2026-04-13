@@ -49,7 +49,7 @@
 
 		<div class="mx-auto max-w-7xl px-6 md:px-12">
 			<div class="grid items-center gap-16 md:grid-cols-2 md:gap-24">
-				<div class="reveal-scale relative reveal">
+				<div class="reveal-scale reveal relative">
 					<div
 						class="img-zoom relative aspect-[3/4] overflow-hidden rounded-sm bg-stone-200"
 					>
@@ -88,7 +88,7 @@
 					</div>
 
 					<div
-						class="absolute -right-6 bottom-16 max-w-[180px] rounded-sm bg-white p-5 shadow-[0_8px_40px_rgba(0,0,0,0.12)] reveal d-300"
+						class="reveal d-300 absolute -right-6 bottom-16 max-w-[180px] rounded-sm bg-white p-5 shadow-[0_8px_40px_rgba(0,0,0,0.12)]"
 					>
 						<span
 							class="text-gold-DEFAULT block font-serif text-[2.5rem] leading-none"
@@ -120,7 +120,7 @@
 				</div>
 
 				<div>
-					<div class="mb-6 flex items-center gap-4 reveal">
+					<div class="reveal mb-6 flex items-center gap-4">
 						<div class="line-draw h-px w-10" />
 						<span
 							class="font-sans text-[0.68rem] uppercase tracking-[0.25em]"
@@ -129,35 +129,35 @@
 						</span>
 					</div>
 
-					<h2 class="mb-6 reveal d-100">
+					<h2 class="reveal d-100 mb-6">
 						<span
 							class="block font-serif text-[clamp(2rem,4vw,3.5rem)] leading-[1.1] text-stone-900"
 						>
 							{{ t('about.headline1') }}
 						</span>
 						<span
-							class="block text-[clamp(2rem,4vw,3.5rem)] leading-[1.1] font-serif-italic"
+							class="font-serif-italic block text-[clamp(2rem,4vw,3.5rem)] leading-[1.1]"
 						>
 							{{ t('about.headline2') }}
 						</span>
 					</h2>
 
 					<div
-						class="line-draw mb-8 h-px bg-stone-200 reveal d-200"
+						class="line-draw reveal d-200 mb-8 h-px bg-stone-200"
 					/>
 
 					<p
-						class="mb-6 font-sans text-[1rem] font-light leading-[1.8] text-stone-600 reveal d-200"
+						class="reveal d-200 mb-6 font-sans text-[1rem] font-light leading-[1.8] text-stone-600"
 					>
 						{{ t('about.p1') }}
 					</p>
 					<p
-						class="mb-10 font-sans text-[1rem] font-light leading-[1.8] text-stone-600 reveal d-300"
+						class="reveal d-300 mb-10 font-sans text-[1rem] font-light leading-[1.8] text-stone-600"
 					>
 						{{ t('about.p2') }}
 					</p>
 
-					<ul class="flex flex-col gap-4 reveal d-400">
+					<ul class="reveal d-400 flex flex-col gap-4">
 						<li
 							v-for="val in values"
 							:key="val.title"
