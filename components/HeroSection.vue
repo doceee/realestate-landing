@@ -13,7 +13,7 @@
 
 		<video
 			ref="videoEl"
-			:src="VIDEO_URL"
+			v-bind="VIDEO_URL ? { src: VIDEO_URL } : {}"
 			poster="/images/hero-poster.jpg"
 			class="pointer-events-none absolute inset-0 h-full w-full select-none object-cover"
 			:style="{ opacity: videoOpacity }"
