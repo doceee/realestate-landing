@@ -1,9 +1,9 @@
 <template>
 	<section
 		id="services"
-		class="relative overflow-hidden bg-stone-50 py-28 md:py-40"
+		class="relative overflow-hidden bg-stone-50 py-20 xs:py-24 md:py-40"
 	>
-		<div class="mx-auto max-w-7xl px-6 md:px-12">
+		<div class="mx-auto max-w-7xl px-4 xs:px-5 md:px-12">
 			<div class="mb-20 grid items-end gap-12 md:grid-cols-2 md:gap-24">
 				<div>
 					<div class="reveal mb-6 flex items-center gap-4">
@@ -38,7 +38,7 @@
 				<div
 					v-for="(service, i) in services"
 					:key="service.title"
-					class="reveal group relative cursor-default overflow-hidden bg-stone-50 p-8 transition-colors duration-500 hover:bg-stone-900 md:p-10"
+					class="reveal group relative cursor-default overflow-hidden bg-stone-50 p-5 transition-colors duration-500 hover:bg-stone-900 xs:p-6 md:p-10"
 					:class="`d-${Math.min((i + 1) * 100, 600)}`"
 				>
 					<div
@@ -46,7 +46,7 @@
 					/>
 
 					<span
-						class="font-serif-italic mb-6 block select-none text-[5rem] leading-none text-stone-200 transition-colors duration-500 group-hover:text-stone-800"
+						class="font-serif-italic mb-6 block select-none text-[3.5rem] leading-none text-stone-200 transition-colors duration-500 group-hover:text-stone-800 xs:text-[5rem]"
 					>
 						{{ String(i + 1).padStart(2, '0') }}
 					</span>

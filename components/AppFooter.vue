@@ -1,5 +1,7 @@
 <template>
-	<footer class="bg-stone-950 px-6 py-12 text-white/60 md:px-12">
+	<footer
+		class="bg-stone-950 px-4 py-10 text-white/60 xs:px-5 xs:py-12 md:px-12"
+	>
 		<div
 			class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 md:flex-row"
 		>
@@ -13,7 +15,7 @@
 			<p class="text-center text-[0.72rem] tracking-[0.1em]">
 				{{ t('footer.copyright', { year }) }}
 			</p>
-			<ul class="flex list-none gap-6">
+			<ul class="flex list-none flex-wrap justify-center gap-4 xs:gap-6">
 				<li v-for="l in links" :key="l">
 					<a
 						href="#"

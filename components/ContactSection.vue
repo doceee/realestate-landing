@@ -1,7 +1,7 @@
 <template>
 	<section
 		id="contact"
-		class="relative overflow-hidden bg-stone-950 py-28 md:py-40"
+		class="relative overflow-hidden bg-stone-950 py-20 xs:py-24 md:py-40"
 	>
 		<div
 			class="pointer-events-none absolute inset-0 opacity-[0.03]"
@@ -37,7 +37,7 @@
 			</svg>
 		</div>
 
-		<div class="relative mx-auto max-w-7xl px-6 md:px-12">
+		<div class="relative mx-auto max-w-7xl px-4 xs:px-5 md:px-12">
 			<div class="grid gap-16 md:grid-cols-2 md:gap-24">
 				<div>
 					<div class="reveal mb-6 flex items-center gap-4">

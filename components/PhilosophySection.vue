@@ -1,7 +1,7 @@
 <template>
 	<section
 		id="philosophy"
-		class="relative overflow-hidden bg-stone-100 py-28 md:py-44"
+		class="relative overflow-hidden bg-stone-100 py-20 xs:py-24 md:py-44"
 	>
 		<div
 			class="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 select-none pr-8 font-serif text-[28rem] leading-none text-stone-900 opacity-[0.04]"
@@ -9,7 +9,7 @@
 			M
 		</div>
 
-		<div class="mx-auto max-w-6xl px-6 md:px-12">
+		<div class="mx-auto max-w-6xl px-4 xs:px-5 md:px-12">
 			<div class="reveal mb-20 flex items-center gap-6">
 				<div class="line-draw h-px flex-1 bg-stone-300" />
 				<span

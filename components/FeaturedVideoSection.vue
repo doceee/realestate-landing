@@ -1,7 +1,7 @@
 <template>
 	<section
 		id="video"
-		class="relative overflow-hidden bg-stone-950 py-28 md:py-40"
+		class="relative overflow-hidden bg-stone-950 py-20 xs:py-24 md:py-40"
 	>
 		<div
 			class="pointer-events-none absolute inset-0 opacity-[0.03]"
@@ -22,7 +22,7 @@
 			"
 		/>
 
-		<div class="mx-auto max-w-6xl px-6 md:px-12">
+		<div class="mx-auto max-w-6xl px-4 xs:px-5 md:px-12">
 			<div class="mb-16 text-center">
 				<div class="reveal mb-6 flex items-center justify-center gap-4">
 					<div class="line-draw h-px w-10 bg-stone-700" />

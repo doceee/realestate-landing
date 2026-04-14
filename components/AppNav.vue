@@ -3,7 +3,7 @@
 		class="pointer-events-none fixed left-0 right-0 top-0 z-30 flex justify-center px-4 pt-5"
 	>
 		<nav
-			class="pointer-events-auto flex w-full max-w-5xl animate-nav-in items-center justify-between rounded-full px-6 py-3 transition-all duration-500"
+			class="pointer-events-auto flex w-full max-w-5xl animate-nav-in items-center justify-between rounded-full px-4 py-3 transition-all duration-500 xs:px-6"
 			:class="scrolled ? 'glass-dark' : 'glass'"
 		>
 			<nuxt-link

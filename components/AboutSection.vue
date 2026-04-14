@@ -1,7 +1,7 @@
 <template>
 	<section
 		id="about"
-		class="relative overflow-hidden bg-stone-50 py-28 md:py-40"
+		class="relative overflow-hidden bg-stone-50 py-20 xs:py-24 md:py-40"
 	>
 		<div
 			class="pointer-events-none absolute right-0 top-0 h-96 w-96 opacity-5"
@@ -47,7 +47,7 @@
 			</svg>
 		</div>
 
-		<div class="mx-auto max-w-7xl px-6 md:px-12">
+		<div class="mx-auto max-w-7xl px-4 xs:px-5 md:px-12">
 			<div class="grid items-center gap-16 md:grid-cols-2 md:gap-24">
 				<div class="reveal-scale reveal relative">
 					<div
@@ -88,7 +88,7 @@
 					</div>
 
 					<div
-						class="reveal d-300 absolute -right-6 bottom-16 max-w-[180px] rounded-sm bg-white p-5 shadow-[0_8px_40px_rgba(0,0,0,0.12)]"
+						class="reveal d-300 absolute bottom-16 right-0 max-w-[160px] rounded-sm bg-white p-4 shadow-[0_8px_40px_rgba(0,0,0,0.12)] xs:-right-3 xs:max-w-[180px] xs:p-5 md:-right-6"
 					>
 						<span
 							class="text-gold-DEFAULT block font-serif text-[2.5rem] leading-none"

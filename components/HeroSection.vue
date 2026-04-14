@@ -6,7 +6,7 @@
 		<video
 			ref="videoEl"
 			:src="VIDEO_URL"
-			class="pointer-events-none absolute inset-0 h-full w-full translate-y-[calc(17%+100px)] select-none object-cover"
+			class="pointer-events-none absolute inset-0 h-full w-full translate-y-[10%] select-none object-cover"
 			:style="{ opacity: videoOpacity }"
 			muted
 			autoplay
@@ -27,14 +27,14 @@
 		/>
 
 		<div
-			class="relative z-10 mx-auto w-full max-w-7xl px-6 pb-24 md:px-12 md:pb-32"
+			class="relative z-10 mx-auto w-full max-w-7xl px-4 pb-20 xs:px-5 md:px-12 md:pb-32"
 		>
 			<div
 				class="d-300 mb-8 inline-flex animate-fade-in items-center gap-3"
 			>
-				<span class="h-px w-10 bg-stone-50" />
+				<span class="h-px w-8 bg-stone-50 xs:w-10" />
 				<span
-					class="font-sans text-[0.7rem] uppercase tracking-[0.25em] text-stone-50"
+					class="font-sans text-[0.65rem] uppercase tracking-[0.2em] text-stone-50 xs:text-[0.7rem] xs:tracking-[0.25em]"
 				>
 					Est. 2008 · Warsaw
 				</span>
@@ -42,29 +42,29 @@
 
 			<h1 class="mb-6 leading-[1.2] tracking-[-0.01em] text-white">
 				<span
-					class="d-100 block animate-slide-up font-serif text-[clamp(3rem,8vw,7.5rem)]"
+					class="d-100 block animate-slide-up font-serif text-[clamp(2rem,8vw,7.5rem)]"
 				>
 					{{ t('hero.headline1') }}
 				</span>
 				<span
-					class="text-gold-gradient d-200 block animate-slide-up text-[clamp(3rem,8vw,7.5rem)] italic"
+					class="text-gold-gradient d-200 block animate-slide-up text-[clamp(2rem,8vw,7.5rem)] italic"
 				>
 					{{ t('hero.headline2') }}
 				</span>
 			</h1>
 
 			<p
-				class="d-400 mb-12 max-w-[44ch] animate-fade-up font-sans text-[1.05rem] font-light leading-[1.7] text-white/60"
+				class="d-400 mb-10 max-w-[44ch] animate-fade-up font-sans text-[0.95rem] font-light leading-[1.7] text-white/60 xs:text-[1.05rem] md:mb-12"
 			>
 				{{ t('hero.sub') }}
 			</p>
 
 			<div
-				class="d-500 flex animate-fade-up flex-wrap items-center gap-5"
+				class="d-500 flex animate-fade-up flex-wrap items-center gap-4 xs:gap-5"
 			>
 				<a
 					href="#services"
-					class="group inline-flex items-center gap-3 rounded-full bg-gold px-8 py-4 text-[0.85rem] font-medium uppercase tracking-[0.08em] text-stone-950 no-underline transition-all duration-300 hover:shadow-[0_8px_32px_rgba(184,154,106,0.45)]"
+					class="group inline-flex items-center gap-3 rounded-full bg-gold px-6 py-3 text-[0.8rem] font-medium uppercase tracking-[0.08em] text-stone-950 no-underline transition-all duration-300 hover:shadow-[0_8px_32px_rgba(184,154,106,0.45)] xs:px-8 xs:py-4 xs:text-[0.85rem]"
 				>
 					{{ t('hero.ctaPrimary') }}
 					<span
@@ -75,7 +75,7 @@
 				</a>
 				<a
 					href="#about"
-					class="group relative inline-flex items-center gap-2 text-[0.85rem] uppercase tracking-[0.08em] text-white/70 no-underline transition-colors duration-300 hover:text-white"
+					class="group relative inline-flex items-center gap-2 text-[0.8rem] uppercase tracking-[0.08em] text-white/70 no-underline transition-colors duration-300 hover:text-white xs:text-[0.85rem]"
 				>
 					{{ t('hero.ctaSecondary') }}
 					<span
@@ -85,7 +85,7 @@
 			</div>
 
 			<div
-				class="d-600 mt-16 flex animate-fade-up flex-wrap gap-10 border-t border-white/10 pt-10"
+				class="d-600 mt-12 flex animate-fade-up flex-wrap gap-6 border-t border-white/10 pt-8 xs:gap-8 md:mt-16 md:gap-10 md:pt-10"
 			>
 				<div
 					v-for="stat in stats"
