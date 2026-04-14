@@ -351,7 +351,7 @@ export default config({
 		kind: 'cloud',
 	},
 	cloud: {
-		project: 'realestate-landing/realestate-landing',
+		project: process.env.KEYSTATIC_CLOUD_PROJECT ?? '',
 	},
 	ui: {
 		brand: {

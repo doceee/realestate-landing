@@ -2,30 +2,35 @@
 
 Luxury real estate landing page built with Instrument Serif, Tailwind CSS, and custom video logic. Supports English and Polish with URL-based locale switching (`/en/`, `/pl/`).
 
-## 🚀 Getting started
+## Getting started
 
 ```bash
 npm install
 npm run dev   # http://localhost:3000
 ```
 
-## 🧑‍💼 Content editing with Keystatic
+## Content editing with Keystatic
 
-Keystatic is integrated directly into the Nuxt app and manages the existing locale JSON files used by `@nuxtjs/i18n`.
+Keystatic CMS is integrated directly into the Nuxt app and manages the locale JSON files used by `@nuxtjs/i18n`.
 
 - Admin UI: `/keystatic`
-- API routes: `/api/keystatic/*`
-- Managed files:
-    - `i18n/locales/en.json`
-    - `i18n/locales/pl.json`
+- Managed files: `i18n/locales/en.json`, `i18n/locales/pl.json`
 
-Run the app locally and open `http://localhost:3000/keystatic` to edit homepage copy through the CMS UI.
+### Locally
 
-In production, access to `/keystatic` and `/api/keystatic/*` is protected with HTTP Basic Auth.
+Run the app and open `http://localhost:3000/keystatic`. Changes are saved directly to the JSON files on disk.
 
-```bash
-KEYSTATIC_BASIC_AUTH_USER=admin
-KEYSTATIC_BASIC_AUTH_PASSWORD=admin
-```
+### Production
 
-If these variables are missing in production, Keystatic returns `503` instead of exposing the admin UI publicly.
+Storage is handled by **Keystatic Cloud** (`cloud` mode). Editors log in with their Keystatic Cloud account — no GitHub account required.
+
+Changes saved in the admin trigger a commit to the `main` branch, which automatically triggers a Vercel redeploy.
+
+To invite a new editor: keystatic.cloud → project settings → Members → Invite.
+
+## Environment variables
+
+| Variable                  | Required | Description                                                                             |
+| ------------------------- | -------- | --------------------------------------------------------------------------------------- |
+| `NUXT_PUBLIC_BASE_URL`    | no       | Public URL of the site (e.g. `https://example.vercel.app`) — used for SEO hreflang tags |
+| `KEYSTATIC_CLOUD_PROJECT` | no       | Keystatic Cloud project ID (e.g. `team/project`)                                        |
