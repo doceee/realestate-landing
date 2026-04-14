@@ -25,7 +25,7 @@
 					class="font-serif-italic reveal d-100 text-[clamp(1.8rem,4vw,3.2rem)] leading-[1.25] tracking-[-0.01em] text-stone-800"
 				>
 					"{{ t('philosophy.quoteBody') }}
-					<span class="text-gold-light">
+					<span class="text-gold">
 						{{ t('philosophy.quoteHighlight') }}
 					</span>
 					"

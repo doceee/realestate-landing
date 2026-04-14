@@ -20,7 +20,6 @@ export default withNuxt(
 		files: ['**/*.ts', '**/*.vue', '**/*.js'],
 		rules: {
 			'@typescript-eslint/no-explicit-any': 'warn',
-
 			'vue/multi-word-component-names': 'off',
 			'vue/html-self-closing': 'off',
 			'vue/component-name-in-template-casing': ['error', 'kebab-case'],

@@ -64,7 +64,7 @@
 			>
 				<a
 					href="#services"
-					class="group inline-flex items-center gap-3 rounded-full bg-gold-light px-8 py-4 text-[0.85rem] font-medium uppercase tracking-[0.08em] text-stone-950 no-underline transition-all duration-300 hover:shadow-[0_8px_32px_rgba(184,154,106,0.45)]"
+					class="group inline-flex items-center gap-3 rounded-full bg-gold px-8 py-4 text-[0.85rem] font-medium uppercase tracking-[0.08em] text-stone-950 no-underline transition-all duration-300 hover:shadow-[0_8px_32px_rgba(184,154,106,0.45)]"
 				>
 					{{ t('hero.ctaPrimary') }}
 					<span

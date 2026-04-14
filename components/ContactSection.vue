@@ -117,7 +117,7 @@
 							/>
 							<button
 								type="submit"
-								class="group inline-flex items-center gap-3 self-start rounded-full bg-gold-light px-8 py-4 font-sans text-[0.85rem] font-medium uppercase tracking-[0.08em] text-stone-950 transition-all duration-300 hover:shadow-[0_6px_24px_rgba(184,154,106,0.4)]"
+								class="group inline-flex items-center gap-3 self-start rounded-full bg-gold-dark px-8 py-4 font-sans text-[0.85rem] font-medium uppercase tracking-[0.08em] text-stone-950 transition-all duration-300 hover:shadow-[0_6px_24px_rgba(184,154,106,0.4)]"
 							>
 								{{ t('contact.submit') }}
 								<span

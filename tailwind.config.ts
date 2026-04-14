@@ -34,15 +34,12 @@ export default {
 				},
 			},
 			animation: {
-				/* Entrance */
 				'fade-up': 'fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) both',
 				'fade-in': 'fadeIn 0.7s ease both',
 				'slide-up': 'slideUp 1s cubic-bezier(0.16,1,0.3,1) both',
 
-				/* Nav */
 				'nav-in': 'navIn 0.6s cubic-bezier(0.16,1,0.3,1) both',
 
-				/* Scroll indicator */
 				'scroll-drop': 'scrollDrop 1.8s ease-in-out infinite',
 			},
 			keyframes: {
