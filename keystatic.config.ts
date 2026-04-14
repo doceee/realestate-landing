@@ -348,7 +348,10 @@ const localeSchema = {
 
 export default config({
 	storage: {
-		kind: 'local',
+		kind: 'cloud',
+	},
+	cloud: {
+		project: 'realestate-landing/realestate-landing',
 	},
 	ui: {
 		brand: {

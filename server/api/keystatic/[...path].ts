@@ -8,7 +8,6 @@ import {
 	setResponseStatus,
 } from 'h3';
 import keystaticConfig from '../../../keystatic.config';
-import { assertKeystaticProductionAuth } from '../../utils/keystaticAuth';
 
 const keystaticHandler = makeGenericAPIRouteHandler({
 	config: keystaticConfig,
@@ -16,7 +15,6 @@ const keystaticHandler = makeGenericAPIRouteHandler({
 });
 
 export default defineEventHandler(async (event) => {
-	assertKeystaticProductionAuth(event);
 
 	const response = await keystaticHandler({
 		headers: {
