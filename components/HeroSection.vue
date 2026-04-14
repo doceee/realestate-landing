@@ -20,7 +20,7 @@
 			muted
 			autoplay
 			playsinline
-			preload="auto"
+			preload="none"
 			@canplay="onCanPlay"
 			@timeupdate="onTimeUpdate"
 			@ended="onEnded"
@@ -175,11 +175,12 @@
 		}));
 	});
 
-	const VIDEO_URL = computed(() => t('hero.videoUrl'));
-
 	const mounted = ref(false);
+	const VIDEO_URL = ref('');
+
 	onMounted(() => {
 		mounted.value = true;
+		VIDEO_URL.value = t('hero.videoUrl');
 	});
 
 	const videoEl = ref<HTMLVideoElement | null>(null);
@@ -211,7 +212,6 @@
 		const step = (now: number) => {
 			const elapsed = now - start;
 			const t = Math.min(elapsed / durationMs, 1);
-			// ease in-out quad
 			const ease = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
 			videoOpacity.value = from + delta * ease;
 
@@ -227,9 +227,7 @@
 		fadeRaf = requestAnimationFrame(step);
 	}
 
-	// ── event handlers ──────────────────────────────────────
 	function onCanPlay() {
-		// Fade in from 0 → 1 over 500ms
 		fadeTo(0, 1, FADE_IN_MS);
 	}
 
@@ -247,14 +245,12 @@
 	}
 
 	function onEnded() {
-		// Reset + replay (custom crossfade loop — no loop attribute)
 		fadingOut = false;
 		const vid = videoEl.value;
 		if (!vid) return;
 
 		vid.currentTime = 0;
 		vid.play().catch(() => {});
-		// onCanPlay will fire again → fade-in
 	}
 
 	onUnmounted(() => cancelFade());
