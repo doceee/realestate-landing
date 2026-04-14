@@ -6,7 +6,7 @@
 		<video
 			ref="videoEl"
 			:src="VIDEO_URL"
-			class="pointer-events-none absolute inset-0 h-full w-full translate-y-[10%] select-none object-cover"
+			class="pointer-events-none absolute inset-0 h-full w-full select-none object-cover"
 			:style="{ opacity: videoOpacity }"
 			muted
 			autoplay
@@ -27,7 +27,7 @@
 		/>
 
 		<div
-			class="relative z-10 mx-auto w-full max-w-7xl px-4 pb-20 xs:px-5 md:px-12 md:pb-32"
+			class="relative z-10 mx-auto w-full max-w-7xl px-4 pb-20 pt-[80px] xs:px-5 xs:pt-[80px] sm:pt-[100px] md:px-12 md:pb-32"
 		>
 			<div
 				class="d-300 mb-8 inline-flex animate-fade-in items-center gap-3"
