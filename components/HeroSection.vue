@@ -11,22 +11,24 @@
 			class="pointer-events-none absolute inset-0 h-full w-full select-none object-cover"
 		/>
 
-		<video
-			ref="videoEl"
-			v-bind="VIDEO_URL ? { src: VIDEO_URL } : {}"
-			poster="/images/hero-poster.jpg"
-			class="pointer-events-none absolute inset-0 h-full w-full select-none object-cover"
-			:style="{ opacity: videoOpacity }"
-			muted
-			autoplay
-			playsinline
-			preload="none"
-			@canplay="onCanPlay"
-			@timeupdate="onTimeUpdate"
-			@ended="onEnded"
-		>
-			<track kind="captions" src="/captions/hero.vtt" />
-		</video>
+		<client-only>
+			<video
+				ref="videoEl"
+				:src="VIDEO_URL"
+				poster="/images/hero-poster.jpg"
+				class="pointer-events-none absolute inset-0 h-full w-full select-none object-cover"
+				:style="{ opacity: videoOpacity }"
+				muted
+				autoplay
+				playsinline
+				preload="none"
+				@canplay="onCanPlay"
+				@timeupdate="onTimeUpdate"
+				@ended="onEnded"
+			>
+				<track kind="captions" src="/captions/hero.vtt" />
+			</video>
+		</client-only>
 
 		<div
 			class="pointer-events-none absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/30 to-stone-950/20"
@@ -175,12 +177,11 @@
 		}));
 	});
 
-	const mounted = ref(false);
-	const VIDEO_URL = ref('');
+	const VIDEO_URL = computed(() => t('hero.videoUrl'));
 
+	const mounted = ref(false);
 	onMounted(() => {
 		mounted.value = true;
-		VIDEO_URL.value = t('hero.videoUrl');
 	});
 
 	const videoEl = ref<HTMLVideoElement | null>(null);
