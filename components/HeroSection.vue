@@ -4,7 +4,7 @@
 		class="relative flex min-h-screen flex-col items-center justify-end overflow-hidden bg-stone-950"
 	>
 		<img
-			src="/images/hero-poster.jpg"
+			src="/images/hero-poster.webp"
 			alt="hero poster"
 			aria-hidden="true"
 			fetchpriority="high"
@@ -15,7 +15,7 @@
 			<video
 				ref="videoEl"
 				:src="VIDEO_URL"
-				poster="/images/hero-poster.jpg"
+				poster="/images/hero-poster.webp"
 				class="pointer-events-none absolute inset-0 h-full w-full select-none object-cover"
 				:style="{ opacity: videoOpacity }"
 				muted

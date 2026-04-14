@@ -16,8 +16,8 @@ export default defineNuxtConfig({
 				{
 					rel: 'preload',
 					as: 'image',
-					type: 'image/jpeg',
-					href: '/images/hero-poster.jpg',
+					type: 'image/webp',
+					href: '/images/hero-poster.webp',
 				},
 				{
 					rel: 'preload',
@@ -52,6 +52,12 @@ export default defineNuxtConfig({
 		externals: {
 			inline: ['@nuxtjs/i18n/dist/runtime'],
 		},
+		prerender: {
+			crawlLinks: true,
+			routes: ['/en', '/pl'],
+			ignore: ['/keystatic'],
+		},
+		compressPublicAssets: true,
 	},
 
 	hooks: {
@@ -67,7 +73,36 @@ export default defineNuxtConfig({
 	},
 
 	routeRules: {
-		'/': { redirect: '/en' },
+		'/': { redirect: { to: '/en', statusCode: 301 } },
+		'/_nuxt/**': {
+			headers: { 'cache-control': 'public, max-age=31536000, immutable' },
+		},
+		'/images/**': {
+			headers: {
+				'cache-control':
+					'public, max-age=86400, stale-while-revalidate=604800',
+			},
+		},
+		'/fonts/**': {
+			headers: {
+				'cache-control':
+					'public, max-age=86400, stale-while-revalidate=604800',
+			},
+		},
+		'/en': {
+			headers: {
+				'cache-control':
+					'public, s-maxage=31536000, stale-while-revalidate=86400',
+			},
+		},
+		'/pl': {
+			headers: {
+				'cache-control':
+					'public, s-maxage=31536000, stale-while-revalidate=86400',
+			},
+		},
+		'/keystatic/**': { ssr: true },
+		'/api/keystatic/**': { ssr: true },
 	},
 
 	i18n: {
