@@ -122,7 +122,6 @@ body {
 	animation-delay: 800ms;
 }
 
-/* ── Line draw animation ── */
 .line-draw {
 	transform: scaleX(0);
 	transform-origin: left;
@@ -132,7 +131,17 @@ body {
 	transform: scaleX(1);
 }
 
-/* ── Custom scrollbar ── */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
 ::-webkit-scrollbar {
 	width: 3px;
 }
@@ -144,7 +153,6 @@ body {
 	border-radius: 2px;
 }
 
-/* ── Smooth image zoom on hover ── */
 .img-zoom {
 	overflow: hidden;
 }

@@ -3,9 +3,18 @@
 		id="hero"
 		class="relative flex min-h-screen flex-col items-center justify-end overflow-hidden bg-stone-950"
 	>
+		<img
+			src="/images/hero-poster.jpg"
+			alt="hero poster"
+			aria-hidden="true"
+			fetchpriority="high"
+			class="pointer-events-none absolute inset-0 h-full w-full select-none object-cover"
+		/>
+
 		<video
 			ref="videoEl"
 			:src="VIDEO_URL"
+			poster="/images/hero-poster.jpg"
 			class="pointer-events-none absolute inset-0 h-full w-full select-none object-cover"
 			:style="{ opacity: videoOpacity }"
 			muted
@@ -30,7 +39,10 @@
 			class="relative z-10 mx-auto w-full max-w-7xl px-4 pb-20 pt-[80px] xs:px-5 xs:pt-[80px] sm:pt-[100px] md:px-12 md:pb-32"
 		>
 			<div
-				class="d-300 mb-8 inline-flex animate-fade-in items-center gap-3"
+				:class="[
+					'd-300 mb-8 inline-flex items-center gap-3',
+					mounted && 'animate-fade-in',
+				]"
 			>
 				<span class="h-px w-8 bg-stone-50 xs:w-10" />
 				<span
@@ -42,25 +54,37 @@
 
 			<h1 class="mb-6 leading-[1.2] tracking-[-0.01em] text-white">
 				<span
-					class="d-100 block animate-slide-up font-serif text-[clamp(2rem,8vw,7.5rem)]"
+					:class="[
+						'd-100 block font-serif text-[clamp(2rem,8vw,7.5rem)]',
+						mounted && 'animate-slide-up',
+					]"
 				>
 					{{ t('hero.headline1') }}
 				</span>
 				<span
-					class="text-gold-gradient d-200 block animate-slide-up text-[clamp(2rem,8vw,7.5rem)] italic"
+					:class="[
+						'text-gold-gradient d-200 block text-[clamp(2rem,8vw,7.5rem)] italic',
+						mounted && 'animate-slide-up',
+					]"
 				>
 					{{ t('hero.headline2') }}
 				</span>
 			</h1>
 
 			<p
-				class="d-400 mb-10 max-w-[44ch] animate-fade-up font-sans text-[0.95rem] font-light leading-[1.7] text-white/60 xs:text-[1.05rem] md:mb-12"
+				:class="[
+					'd-400 mb-10 max-w-[44ch] font-sans text-[0.95rem] font-light leading-[1.7] text-white/60 xs:text-[1.05rem] md:mb-12',
+					mounted && 'animate-fade-up',
+				]"
 			>
 				{{ t('hero.sub') }}
 			</p>
 
 			<div
-				class="d-500 flex animate-fade-up flex-wrap items-center gap-4 xs:gap-5"
+				:class="[
+					'd-500 flex flex-wrap items-center gap-4 xs:gap-5',
+					mounted && 'animate-fade-up',
+				]"
 			>
 				<a
 					href="#services"
@@ -85,7 +109,10 @@
 			</div>
 
 			<div
-				class="d-600 mt-12 flex animate-fade-up flex-wrap gap-6 border-t border-white/10 pt-8 xs:gap-8 md:mt-16 md:gap-10 md:pt-10"
+				:class="[
+					'd-600 mt-12 flex flex-wrap gap-6 border-t border-white/10 pt-8 xs:gap-8 md:mt-16 md:gap-10 md:pt-10',
+					mounted && 'animate-fade-up',
+				]"
 			>
 				<div
 					v-for="stat in stats"
@@ -107,7 +134,10 @@
 		</div>
 
 		<div
-			class="d-800 absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 animate-fade-in flex-col items-center gap-2"
+			:class="[
+				'd-800 absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2',
+				mounted && 'animate-fade-in',
+			]"
 		>
 			<div class="relative h-12 w-[1px] overflow-hidden bg-white/20">
 				<div
@@ -146,6 +176,11 @@
 	});
 
 	const VIDEO_URL = computed(() => t('hero.videoUrl'));
+
+	const mounted = ref(false);
+	onMounted(() => {
+		mounted.value = true;
+	});
 
 	const videoEl = ref<HTMLVideoElement | null>(null);
 	const videoOpacity = ref(0);

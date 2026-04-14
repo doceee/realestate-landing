@@ -15,6 +15,12 @@ export default defineNuxtConfig({
 			link: [
 				{
 					rel: 'preload',
+					as: 'image',
+					type: 'image/jpeg',
+					href: '/images/hero-poster.jpg',
+				},
+				{
+					rel: 'preload',
 					as: 'font',
 					type: 'font/woff2',
 					href: '/fonts/dm-sans-v17-latin_latin-ext-regular.woff2',
