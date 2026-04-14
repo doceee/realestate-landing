@@ -1,156 +1,152 @@
 {
-  "nav": {
-    "about": "About",
-    "properties": "Properties",
-    "philosophy": "Philosophy",
-    "services": "Services",
-    "cta": "Get in touch",
-    "menuAriaLabel": "Menu"
-  },
-  "hero": {
-    "headline1": "Where fine living",
-    "headline2": "meets its home",
-    "sub": "Curated portfolio of exceptional properties across prime European markets. Discreet, bespoke, and entirely client-focused.",
-    "ctaPrimary": "Explore properties",
-    "ctaSecondary": "Our story",
-    "scroll": "Scroll",
-    "videoUrl": "https://assets.mixkit.co/videos/4046/4046-720.mp4",
-    "stats": [
-      {
-        "value": "320+",
-        "label": "Properties sold"
-      },
-      {
-        "value": "€2.4B",
-        "label": "Total transacted"
-      },
-      {
-        "value": "16",
-        "label": "Years experience"
-      },
-      {
-        "value": "94%",
-        "label": "Client retention"
-      }
-    ]
-  },
-  "about": {
-    "eyebrow": "Our story",
-    "headline1": "A legacy of",
-    "headline2": "exceptional taste.",
-    "p1": "Founded in Warsaw in 2008, Maison & Co. was born from a single conviction: that every client deserves a real estate experience as refined as the properties themselves.",
-    "p2": "Over sixteen years, we have quietly become the trusted partner of discerning buyers and sellers seeking discretion, expertise, and an unwavering eye for quality.",
-    "yearsLabel": "Years of trust",
-    "values": [
-      {
-        "title": "Discretion",
-        "desc": "Every transaction handled with absolute confidentiality"
-      },
-      {
-        "title": "Curation",
-        "desc": "Only properties that meet our exacting standards"
-      },
-      {
-        "title": "Dedication",
-        "desc": "A single point of contact from first viewing to completion"
-      }
-    ]
-  },
-  "video": {
-    "eyebrow": "Featured listing",
-    "headline1": "A residence worthy",
-    "headline2": "of your ambition.",
-    "videoUrl": "https://assets.mixkit.co/videos/4198/4198-720.mp4",
-    "propertyName": "Villa Solaris",
-    "propertyPrice": "Warsaw Wilanów · €4.2M",
-    "tags": [
-      "5 Bedrooms",
-      "480 m²",
-      "Private garden",
-      "Smart home",
-      "Concierge access"
-    ],
-    "playAriaLabel": "Play video"
-  },
-  "philosophy": {
-    "eyebrow": "Our philosophy",
-    "quoteBody": "Real estate is not merely the transaction of property — it is the careful stewardship of the places",
-    "quoteHighlight": "people call home.",
-    "authorTitle": "Founder & Principal",
-    "pillars": [
-      {
-        "title": "Trust before transaction",
-        "desc": "We invest months — sometimes years — in understanding a client's vision before presenting a single opportunity. The right match matters far more than a swift one."
-      },
-      {
-        "title": "Quality over quantity",
-        "desc": "Our curated portfolio remains deliberately selective. We represent only properties that we would proudly call home ourselves — and nothing less."
-      },
-      {
-        "title": "Silence as a service",
-        "desc": "Many of our most significant transactions never appear in the public record. Discretion is not a policy — it is our deepest professional obligation."
-      }
-    ]
-  },
-  "services": {
-    "eyebrow": "What we offer",
-    "headline1": "Services built",
-    "headline2": "around you.",
-    "subtext": "From initial consultation to final handover, our services cover every facet of the premium property journey — tailored to your circumstances and timeline.",
-    "learnMore": "Learn more",
-    "ctaTitle": "Ready to find your",
-    "ctaHighlight": "perfect home?",
-    "ctaSub": "Schedule a private consultation with one of our advisors.",
-    "ctaBtn": "Book a consultation",
-    "items": [
-      {
-        "title": "Buyer Representation",
-        "desc": "We act exclusively on your behalf — identifying off-market opportunities, conducting thorough due diligence, and negotiating terms that reflect your priorities."
-      },
-      {
-        "title": "Vendor Advisory",
-        "desc": "Strategic guidance for sellers seeking maximum value with minimum exposure. Discreet marketing, qualified buyer pools, and seamless transaction management."
-      },
-      {
-        "title": "Portfolio Management",
-        "desc": "For private clients with multiple assets, we provide ongoing oversight — from maintenance coordination to strategic acquisition and divestment planning."
-      },
-      {
-        "title": "Relocation Services",
-        "desc": "Complete relocation support for executives and families moving to new cities. School search, neighbourhood analysis, and settlement assistance included."
-      },
-      {
-        "title": "Investment Consultancy",
-        "desc": "Yield analysis, market comparables, and long-term capital growth projections to help investors make informed, confident decisions in prime locations."
-      },
-      {
-        "title": "Interior & Renovation",
-        "desc": "Through our trusted network of architects and designers, we connect clients with professionals who share our exacting standards for craft and materials."
-      }
-    ]
-  },
-  "contact": {
-    "eyebrow": "Get in touch",
-    "headline1": "Let's find your",
-    "headline2": "perfect home.",
-    "sub": "Leave your details and one of our advisors will be in touch within one business day.",
-    "namePlaceholder": "Your name",
-    "emailPlaceholder": "Your email",
-    "messagePlaceholder": "Tell us what you're looking for…",
-    "submit": "Send message",
-    "successTitle": "Your email app should be open",
-    "successSub": "Complete and send the pre-filled message to reach us directly."
-  },
-  "footer": {
-    "copyright": "© {year} Maison & Co. · All rights reserved · Warsaw, Poland",
-    "links": [
-      "Privacy",
-      "Terms",
-      "Sitemap"
-    ]
-  },
-  "seo": {
-    "title": "Maison & Co. — Luxury Real Estate",
-    "description": "Exceptional properties for discerning clients. 16 years of trust across prime European markets."
-  }
+	"nav": {
+		"about": "About",
+		"properties": "Properties",
+		"philosophy": "Philosophy",
+		"services": "Services",
+		"cta": "Get in touch",
+		"menuAriaLabel": "Menu"
+	},
+	"hero": {
+		"headline1": "Where fine living",
+		"headline2": "meets its home",
+		"sub": "Curated portfolio of exceptional properties across prime European markets. Discreet, bespoke, and entirely client-focused.",
+		"ctaPrimary": "Explore properties",
+		"ctaSecondary": "Our story",
+		"scroll": "Scroll",
+		"videoUrl": "https://assets.mixkit.co/videos/4046/4046-720.mp4",
+		"stats": [
+			{
+				"value": "320+",
+				"label": "Properties sold"
+			},
+			{
+				"value": "€2.4B",
+				"label": "Total transacted"
+			},
+			{
+				"value": "16",
+				"label": "Years experience"
+			},
+			{
+				"value": "94%",
+				"label": "Client retention"
+			}
+		]
+	},
+	"about": {
+		"eyebrow": "Our story",
+		"headline1": "A legacy of",
+		"headline2": "exceptional taste.",
+		"p1": "Founded in Warsaw in 2008, Maison & Co. was born from a single conviction: that every client deserves a real estate experience as refined as the properties themselves.",
+		"p2": "Over sixteen years, we have quietly become the trusted partner of discerning buyers and sellers seeking discretion, expertise, and an unwavering eye for quality.",
+		"yearsLabel": "Years of trust",
+		"values": [
+			{
+				"title": "Discretion",
+				"desc": "Every transaction handled with absolute confidentiality"
+			},
+			{
+				"title": "Curation",
+				"desc": "Only properties that meet our exacting standards"
+			},
+			{
+				"title": "Dedication",
+				"desc": "A single point of contact from first viewing to completion"
+			}
+		]
+	},
+	"video": {
+		"eyebrow": "Featured listing",
+		"headline1": "A residence worthy",
+		"headline2": "of your ambition.",
+		"videoUrl": "https://assets.mixkit.co/videos/4198/4198-720.mp4",
+		"propertyName": "Villa Solaris",
+		"propertyPrice": "Warsaw Wilanów · €4.2M",
+		"tags": [
+			"5 Bedrooms",
+			"480 m²",
+			"Private garden",
+			"Smart home",
+			"Concierge access"
+		],
+		"playAriaLabel": "Play video"
+	},
+	"philosophy": {
+		"eyebrow": "Our philosophy",
+		"quoteBody": "Real estate is not merely the transaction of property — it is the careful stewardship of the places",
+		"quoteHighlight": "people call home.",
+		"authorTitle": "Founder & Principal",
+		"pillars": [
+			{
+				"title": "Trust before transaction",
+				"desc": "We invest months — sometimes years — in understanding a client's vision before presenting a single opportunity. The right match matters far more than a swift one."
+			},
+			{
+				"title": "Quality over quantity",
+				"desc": "Our curated portfolio remains deliberately selective. We represent only properties that we would proudly call home ourselves — and nothing less."
+			},
+			{
+				"title": "Silence as a service",
+				"desc": "Many of our most significant transactions never appear in the public record. Discretion is not a policy — it is our deepest professional obligation."
+			}
+		]
+	},
+	"services": {
+		"eyebrow": "What we offer",
+		"headline1": "Services built",
+		"headline2": "around you.",
+		"subtext": "From initial consultation to final handover, our services cover every facet of the premium property journey — tailored to your circumstances and timeline.",
+		"learnMore": "Learn more",
+		"ctaTitle": "Ready to find your",
+		"ctaHighlight": "perfect home?",
+		"ctaSub": "Schedule a private consultation with one of our advisors.",
+		"ctaBtn": "Book a consultation",
+		"items": [
+			{
+				"title": "Buyer Representation",
+				"desc": "We act exclusively on your behalf — identifying off-market opportunities, conducting thorough due diligence, and negotiating terms that reflect your priorities."
+			},
+			{
+				"title": "Vendor Advisory",
+				"desc": "Strategic guidance for sellers seeking maximum value with minimum exposure. Discreet marketing, qualified buyer pools, and seamless transaction management."
+			},
+			{
+				"title": "Portfolio Management",
+				"desc": "For private clients with multiple assets, we provide ongoing oversight — from maintenance coordination to strategic acquisition and divestment planning."
+			},
+			{
+				"title": "Relocation Services",
+				"desc": "Complete relocation support for executives and families moving to new cities. School search, neighbourhood analysis, and settlement assistance included."
+			},
+			{
+				"title": "Investment Consultancy",
+				"desc": "Yield analysis, market comparables, and long-term capital growth projections to help investors make informed, confident decisions in prime locations."
+			},
+			{
+				"title": "Interior & Renovation",
+				"desc": "Through our trusted network of architects and designers, we connect clients with professionals who share our exacting standards for craft and materials."
+			}
+		]
+	},
+	"contact": {
+		"eyebrow": "Get in touch",
+		"headline1": "Let's find your",
+		"headline2": "perfect home.",
+		"sub": "Leave your details and one of our advisors will be in touch within one business day.",
+		"namePlaceholder": "Your name",
+		"emailPlaceholder": "Your email",
+		"messagePlaceholder": "Tell us what you're looking for…",
+		"submit": "Send message",
+		"successTitle": "Your email app should be open",
+		"successSub": "Complete and send the pre-filled message to reach us directly."
+	},
+	"footer": {
+		"copyright": "© {year} Maison & Co. · All rights reserved · Warsaw, Poland",
+		"links": ["Privacy", "Terms", "Sitemap"]
+	},
+	"seo": {
+		"title": "Maison & Co. — Luxury Real Estate",
+		"description": "Exceptional properties for discerning clients. 16 years of trust across prime European markets."
+	}
 }

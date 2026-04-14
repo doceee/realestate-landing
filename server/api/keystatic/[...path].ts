@@ -15,7 +15,6 @@ const keystaticHandler = makeGenericAPIRouteHandler({
 });
 
 export default defineEventHandler(async (event) => {
-
 	const response = await keystaticHandler({
 		headers: {
 			get(name) {

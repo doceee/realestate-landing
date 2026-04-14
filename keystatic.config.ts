@@ -351,7 +351,7 @@ export default config({
 		kind: 'cloud',
 	},
 	cloud: {
-		project: process.env.KEYSTATIC_CLOUD_PROJECT ?? '',
+		project: import.meta.env.VITE_KEYSTATIC_CLOUD_PROJECT ?? '',
 	},
 	ui: {
 		brand: {
